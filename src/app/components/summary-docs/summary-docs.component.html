@@ -20,7 +20,7 @@
               class="e-select__field u-mb-16"
               [value]="selectedVariant"
               (change)="onVariantChange($any($event.target).value)"
-            >
+              >
               <option value="Default">Default</option>
               <option value="Secondary">Secondary</option>
             </select>
@@ -33,26 +33,30 @@
       <article class="summary-docs__panel">
         <h2>Previsualización del elemento</h2>
         <div class="summary-docs__playground">
-          <details *ngIf="selectedVariant === 'Default'" class="e-summary">
-            <summary class="e-summary__trigger">
-              <span class="e-summary__icon">&#9662;</span>
-              <p class="e-summary__title">Más información</p>
-            </summary>
-            <div class="e-summary__content">
-              Contenido desplegable con texto descriptivo. Puedes incluir
-              <a href="#" class="e-summary__link">enlaces</a> dentro.
-            </div>
-          </details>
+          @if (selectedVariant === 'Default') {
+            <details class="e-summary">
+              <summary class="e-summary__trigger">
+                <span class="e-summary__icon">&#9662;</span>
+                <p class="e-summary__title">Más información</p>
+              </summary>
+              <div class="e-summary__content">
+                Contenido desplegable con texto descriptivo. Puedes incluir
+                <a href="#" class="e-summary__link">enlaces</a> dentro.
+              </div>
+            </details>
+          }
 
-          <details *ngIf="selectedVariant === 'Secondary'" class="e-summary e-summary--secondary">
-            <summary class="e-summary__trigger">
-              <span class="e-summary__icon">&#9662;</span>
-              <p class="e-summary__title">Ver detalles</p>
-            </summary>
-            <div class="e-summary__content">
-              Variante secundaria con tipografía enfatizada y color de acento. Ideal para llamar la atención sobre ayudas o información ampliada.
-            </div>
-          </details>
+          @if (selectedVariant === 'Secondary') {
+            <details class="e-summary e-summary--secondary">
+              <summary class="e-summary__trigger">
+                <span class="e-summary__icon">&#9662;</span>
+                <p class="e-summary__title">Ver detalles</p>
+              </summary>
+              <div class="e-summary__content">
+                Variante secundaria con tipografía enfatizada y color de acento. Ideal para llamar la atención sobre ayudas o información ampliada.
+              </div>
+            </details>
+          }
         </div>
       </article>
 
@@ -64,34 +68,34 @@
         </div>
         <pre class="summary-docs__codeBlock"><code>{{ selectedSnippet }}</code></pre>
       </article>
-          <article class="summary-docs__panel summary-docs__panel--full guide">
-      <details class="e-summary">
-        <summary class="e-summary__trigger">
-          <h2 class="e-summary__title u-mb-0">Guía de uso</h2>
-          <img class="e-summary__icon" src="assets/img/icon-system-chevdrondown.svg" alt="Expandir">
-        </summary>
-        <div class="e-summary__content u-mt-16">
-          <div class="u-ds-flex u-dir-col u-dir-xl-row" style="gap:32px">
-            <div class="u-ds-flex u-dir-col">
-              <p class="u-fw-600">✔️ Forma correcta</p>
-              <ul class="summary-docs__list">
-                <li>Usar el elemento nativo <code>&lt;details&gt;</code> con el <code>&lt;summary&gt;</code> como trigger.</li>
-                <li>Mantener la estructura BEM: <code>.e-summary</code>, <code>.e-summary__trigger</code>, <code>.e-summary__title</code>, <code>.e-summary__icon</code> y <code>.e-summary__content</code>.</li>
-                <li>Aplicar <code>.e-summary--secondary</code> cuando se quiera enfatizar el desplegable.</li>
-              </ul>
-            </div>
-            <div class="u-ds-flex u-dir-col">
-              <p class="u-fw-600">❌ Usos prohibidos</p>
-              <ul class="summary-docs__list">
-                <li>No sustituir <code>&lt;details&gt;</code> por <code>div</code> con JS para imitar su comportamiento.</li>
-                <li>No anidar varios <code>&lt;summary&gt;</code> dentro del mismo <code>&lt;details&gt;</code>.</li>
-                <li>No quitar el icono indicador (<code>.e-summary__icon</code>) que comunica el estado.</li>
-              </ul>
+      <article class="summary-docs__panel summary-docs__panel--full guide">
+        <details class="e-summary">
+          <summary class="e-summary__trigger">
+            <h2 class="e-summary__title u-mb-0">Guía de uso</h2>
+            <img class="e-summary__icon" src="assets/img/icon-system-chevdrondown.svg" alt="Expandir">
+          </summary>
+          <div class="e-summary__content u-mt-16">
+            <div class="u-ds-flex u-dir-col u-dir-xl-row" style="gap:32px">
+              <div class="u-ds-flex u-dir-col">
+                <p class="u-fw-600">✔️ Forma correcta</p>
+                <ul class="summary-docs__list">
+                  <li>Usar el elemento nativo <code>&lt;details&gt;</code> con el <code>&lt;summary&gt;</code> como trigger.</li>
+                  <li>Mantener la estructura BEM: <code>.e-summary</code>, <code>.e-summary__trigger</code>, <code>.e-summary__title</code>, <code>.e-summary__icon</code> y <code>.e-summary__content</code>.</li>
+                  <li>Aplicar <code>.e-summary--secondary</code> cuando se quiera enfatizar el desplegable.</li>
+                </ul>
+              </div>
+              <div class="u-ds-flex u-dir-col">
+                <p class="u-fw-600">❌ Usos prohibidos</p>
+                <ul class="summary-docs__list">
+                  <li>No sustituir <code>&lt;details&gt;</code> por <code>div</code> con JS para imitar su comportamiento.</li>
+                  <li>No anidar varios <code>&lt;summary&gt;</code> dentro del mismo <code>&lt;details&gt;</code>.</li>
+                  <li>No quitar el icono indicador (<code>.e-summary__icon</code>) que comunica el estado.</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </details>
-    </article>
+        </details>
+      </article>
     </div>
   </div>
 </section>

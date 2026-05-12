@@ -20,7 +20,7 @@
               class="e-select__field u-mb-16"
               [value]="selectedVariant"
               (change)="onVariantChange($any($event.target).value)"
-            >
+              >
               <option value="Basic">Input básico</option>
               <option value="Magic">Input magic</option>
               <option value="SelectMagic">Select magic</option>
@@ -30,82 +30,94 @@
           </div>
         </div>
 
-        <label class="checkbox u-ms-24 u-mt-16" *ngIf="supportsError">
-          <input
-            type="checkbox"
-            name="error-variant"
-            [checked]="isErrorVariant"
-            (change)="onErrorVariantChange($any($event.target).checked)"
-          >
-          <div class="checkbox__container">
-            <span class="checkmark"></span>
-            <span class="checkbox__txt">Estado error</span>
-          </div>
-        </label>
+        @if (supportsError) {
+          <label class="checkbox u-ms-24 u-mt-16">
+            <input
+              type="checkbox"
+              name="error-variant"
+              [checked]="isErrorVariant"
+              (change)="onErrorVariantChange($any($event.target).checked)"
+              >
+            <div class="checkbox__container">
+              <span class="checkmark"></span>
+              <span class="checkbox__txt">Estado error</span>
+            </div>
+          </label>
+        }
       </div>
     </article>
 
     <div style="display: flex; flex-direction: column; gap: 16px">
-      <article class="inputs-docs__panel"> 
+      <article class="inputs-docs__panel">
         <h2>Previsualización del elemento</h2>
         <div class="inputs-docs__playground">
-          <div *ngIf="selectedVariant === 'Basic'" class="e-input" [class.error]="isErrorVariant">
-            <div class="e-input__wrapper">
-              <input type="text" class="e-input__field" placeholder="DNI o NIE" required />
+          @if (selectedVariant === 'Basic') {
+            <div class="e-input" [class.error]="isErrorVariant">
+              <div class="e-input__wrapper">
+                <input type="text" class="e-input__field" placeholder="DNI o NIE" required />
+              </div>
+              <span class="e-input__text">Mensaje de ayuda o error</span>
             </div>
-            <span class="e-input__text">Mensaje de ayuda o error</span>
-          </div>
+          }
 
-          <div *ngIf="selectedVariant === 'Magic'" class="e-input" [class.error]="isErrorVariant">
-            <div class="e-input__wrapper e-input__wrapper--magic">
-              <input type="text" class="e-input__field" placeholder=" " required />
-              <label class="e-input__label">Nombre</label>
+          @if (selectedVariant === 'Magic') {
+            <div class="e-input" [class.error]="isErrorVariant">
+              <div class="e-input__wrapper e-input__wrapper--magic">
+                <input type="text" class="e-input__field" placeholder=" " required />
+                <label class="e-input__label">Nombre</label>
+              </div>
+              <span class="e-input__text">Mensaje de ayuda o error</span>
             </div>
-            <span class="e-input__text">Mensaje de ayuda o error</span>
-          </div>
+          }
 
-          <div *ngIf="selectedVariant === 'SelectMagic'" class="e-select" [class.error]="isErrorVariant">
-            <div class="e-select__wrapper e-select__wrapper--magic">
-              <select class="e-select__field">
-                <option value="" selected>Mes</option>
-                <option value="enero">Enero</option>
-                <option value="febrero">Febrero</option>
-                <option value="marzo">Marzo</option>
-              </select>
-              <label class="e-select__label">Mes</label>
+          @if (selectedVariant === 'SelectMagic') {
+            <div class="e-select" [class.error]="isErrorVariant">
+              <div class="e-select__wrapper e-select__wrapper--magic">
+                <select class="e-select__field">
+                  <option value="" selected>Mes</option>
+                  <option value="enero">Enero</option>
+                  <option value="febrero">Febrero</option>
+                  <option value="marzo">Marzo</option>
+                </select>
+                <label class="e-select__label">Mes</label>
+              </div>
+              <span class="e-select__text">Mensaje de ayuda o error</span>
             </div>
-            <span class="e-select__text">Mensaje de ayuda o error</span>
-          </div>
+          }
 
-          <div *ngIf="selectedVariant === 'Radio'" class="e-radio">
-            <label class="e-radio__wrapper">
-              <input type="radio" name="covertype" class="e-radio__input" value="luz" checked />
-              <span class="e-radio__label">Luz</span>
-            </label>
-            <label class="e-radio__wrapper">
-              <input type="radio" name="covertype" class="e-radio__input" value="gas" />
-              <span class="e-radio__label">Gas</span>
-            </label>
-            <label class="e-radio__wrapper">
-              <input type="radio" name="covertype" class="e-radio__input" value="luz-gas" />
-              <span class="e-radio__label">Luz y gas</span>
-            </label>
-          </div>
-                      <div  *ngIf="selectedVariant === 'Checkbox'" class="e-checkbox u-width-100 u-mt-8" [class.error]="isErrorVariant">
+          @if (selectedVariant === 'Radio') {
+            <div class="e-radio">
+              <label class="e-radio__wrapper">
+                <input type="radio" name="covertype" class="e-radio__input" value="luz" checked />
+                <span class="e-radio__label">Luz</span>
+              </label>
+              <label class="e-radio__wrapper">
+                <input type="radio" name="covertype" class="e-radio__input" value="gas" />
+                <span class="e-radio__label">Gas</span>
+              </label>
+              <label class="e-radio__wrapper">
+                <input type="radio" name="covertype" class="e-radio__input" value="luz-gas" />
+                <span class="e-radio__label">Luz y gas</span>
+              </label>
+            </div>
+          }
+          @if (selectedVariant === 'Checkbox') {
+            <div  class="e-checkbox u-width-100 u-mt-8" [class.error]="isErrorVariant">
               <label class="e-checkbox__label">
                 <input type="checkbox" name="checkmark">
                 <div class="e-checkbox__checkmark-container">
                   <span class="e-checkbox__checkmark"></span>
                   <span class="e-checkbox__text">He leído y acepto el
                     <a href="https://www.rastreator.com/aviso-legal.aspx" target="blank" class="e-checkbox__legal">Aviso
-                      legal</a> y la <a href="https://www.rastreator.com/politica-de-privacidad.aspx" target="blank"
-                      class="e-checkbox__legal">Política de
-                      privacidad</a></span>
+                    legal</a> y la <a href="https://www.rastreator.com/politica-de-privacidad.aspx" target="blank"
+                    class="e-checkbox__legal">Política de
+                  privacidad</a></span>
                 </div>
               </label>
               <p class="e-checkbox__error">Para continuar, acepta el Aviso
-                legal y la Política de privacidad</p>
+              legal y la Política de privacidad</p>
             </div>
+          }
         </div>
       </article>
 

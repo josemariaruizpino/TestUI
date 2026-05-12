@@ -3,8 +3,12 @@
     <div class="header__container">
       <div class="header__logo">
         <a href="/" >
-          <img src="../../../assets/img/desktop-logo.svg" alt="" *ngIf="!mobile">
-          <img src="../../../assets/img/mobile-logo.svg" alt="" *ngIf="mobile">
+          @if (!mobile) {
+            <img src="../../../assets/img/desktop-logo.svg" alt="">
+          }
+          @if (mobile) {
+            <img src="../../../assets/img/mobile-logo.svg" alt="">
+          }
         </a>
       </div>
       <div class="header__items">

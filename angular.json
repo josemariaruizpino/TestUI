@@ -114,5 +114,7 @@
       }
     }
   },
-  "defaultProject": "rastreator-components"
+  "cli": {
+    "analytics": false
+  }
 }

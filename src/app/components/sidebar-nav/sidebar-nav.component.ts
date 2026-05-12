@@ -15,9 +15,10 @@ interface NavSection {
 }
 
 @Component({
-  selector: 'app-sidebar-nav',
-  templateUrl: './sidebar-nav.component.html',
-  styleUrls: ['./sidebar-nav.component.scss']
+    selector: 'app-sidebar-nav',
+    templateUrl: './sidebar-nav.component.html',
+    styleUrls: ['./sidebar-nav.component.scss'],
+    standalone: false
 })
 export class SidebarNavComponent implements OnInit, OnDestroy {
   public isSidebarCollapsed = false;

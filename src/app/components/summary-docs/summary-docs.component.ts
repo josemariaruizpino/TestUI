@@ -3,9 +3,10 @@ import { Component } from '@angular/core';
 type SummaryVariant = 'Default' | 'Secondary';
 
 @Component({
-  selector: 'app-summary-docs',
-  templateUrl: './summary-docs.component.html',
-  styleUrls: ['./summary-docs.component.scss']
+    selector: 'app-summary-docs',
+    templateUrl: './summary-docs.component.html',
+    styleUrls: ['./summary-docs.component.scss'],
+    standalone: false
 })
 export class SummaryDocsComponent {
   public selectedVariant: SummaryVariant = 'Default';

@@ -17,9 +17,10 @@ const BUTTON_CLASSES: Record<ButtonVariant, string> = {
 };
 
 @Component({
-  selector: 'app-buttons-docs',
-  templateUrl: './buttons-docs.component.html',
-  styleUrls: ['./buttons-docs.component.scss']
+    selector: 'app-buttons-docs',
+    templateUrl: './buttons-docs.component.html',
+    styleUrls: ['./buttons-docs.component.scss'],
+    standalone: false
 })
 export class ButtonsDocsComponent {
   public selectedVariant: ButtonVariant = 'Primary';

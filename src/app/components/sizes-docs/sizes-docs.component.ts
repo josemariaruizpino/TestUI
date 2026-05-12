@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-sizes-docs',
-  templateUrl: './sizes-docs.component.html',
-  styleUrls: ['./sizes-docs.component.scss']
+    selector: 'app-sizes-docs',
+    templateUrl: './sizes-docs.component.html',
+    styleUrls: ['./sizes-docs.component.scss'],
+    standalone: false
 })
 export class SizesDocsComponent implements OnInit {
 

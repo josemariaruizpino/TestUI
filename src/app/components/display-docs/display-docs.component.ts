@@ -89,9 +89,10 @@ const TRANSLATIONS = {
 };
 
 @Component({
-  selector: 'app-display-docs',
-  templateUrl: './display-docs.component.html',
-  styleUrls: ['./display-docs.component.scss']
+    selector: 'app-display-docs',
+    templateUrl: './display-docs.component.html',
+    styleUrls: ['./display-docs.component.scss'],
+    standalone: false
 })
 export class DisplayDocsComponent implements OnInit, OnDestroy {
   public lang: Lang = 'es';

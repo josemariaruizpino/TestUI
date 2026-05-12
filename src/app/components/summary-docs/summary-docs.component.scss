@@ -1,0 +1,135 @@
+@use "../../../assets/scss/all-generics.scss" as *;
+
+.summary-docs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+
+  &__hero,
+  &__panel {
+    background-color: #ffffff;
+    border: 1px solid #dce8f5;
+    border-radius: 18px;
+    padding: 24px;
+  }
+
+  &__eyebrow {
+    color: #009fc7;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    color: #16314f;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  &__description,
+  &__panel p,
+  &__list {
+    color: #4a6481;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  &__content {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 60% 40%;
+
+    @media screen and (min-width: 1600px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__panel--playground {
+    max-height: 85vh;
+    overflow-y: auto;
+    height: fit-content;
+  }
+
+  &__panel--full {
+    grid-column: 1 / -1;
+  }
+
+  h2 {
+    color: #143152;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  &__playground {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  &__snippetHeader {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  &__snippetLabel {
+    color: #4a6481;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__copyButton {
+    background-color: #143152;
+    border: 0;
+    border-radius: 999px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 14px;
+  }
+
+  &__codeBlock {
+    background-color: #0f1f33;
+    border-radius: 14px;
+    color: #f4f8fc;
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-x: auto;
+    padding: 16px;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  &__list {
+    list-style: disc;
+    margin-left: 20px;
+  }
+
+  @media (max-width: 768px) {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__panel--full {
+      grid-column: auto;
+    }
+  }
+.guide {
+  // Traducido: "Selecciona .pepe si tiene un hijo .e-summary abierto"
+  &:has(.e-summary[open]) {
+    margin-bottom: 16px;
+  }
+}
+  
+}

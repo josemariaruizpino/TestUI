@@ -1,0 +1,337 @@
+<section class="sizes-docs" aria-label="sizes documentation">
+  <div class="sizes-docs__hero">
+    <p class="sizes-docs__eyebrow">Elements / Sizes & Spaces</p>
+    <h1 class="sizes-docs__title">Sizes & Spaces</h1>
+    <p class="sizes-docs__description">
+      Utilidades CSS para controlar dimensiones y espaciado. Organizadas en dos archivos:
+      <code>sizes.scss</code> para altura y ancho, y <code>spaces.scss</code> para márgenes y paddings.
+    </p>
+  </div>
+
+  <div class="sizes-docs__content">
+
+    <!-- sizes.scss -->
+    <article class="sizes-docs__panel">
+      <details class="e-summary">
+        <summary class="e-summary__trigger">
+          <h2 class="e-summary__title u-mb-0">Altura y ancho</h2>
+          <img class="e-summary__icon" src="assets/img/icon-system-chevdrondown.svg" alt="Expandir">
+        </summary>
+        <div class="e-summary__content u-mt-16">
+
+          <p class="u-mb-16">
+            Define <strong>altura</strong> (<code>height</code>) y <strong>ancho</strong> (<code>width</code>)
+            con valores fijos en píxeles o porcentuales. Las clases siguen el patrón
+            <code>.u-&#123;propiedad&#125;-&#123;valor&#125;</code> y admiten un modificador de breakpoint opcional
+            <code>.u-&#123;propiedad&#125;-&#123;bp&#125;-&#123;valor&#125;</code>.
+          </p>
+
+          <h3 class="u-mb-16 u-fw-600">Breakpoints disponibles:</h3>
+          <table class="sizes-docs__table">
+            <thead>
+              <tr>
+                <th>Sufijo</th>
+                <th>Breakpoint</th>
+                <th>Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>sm</code></td><td><code>min-width: 768px</code></td><td>Tablet en adelante</td></tr>
+              <tr><td><code>md</code></td><td><code>min-width: 992px</code></td><td>Escritorio pequeño</td></tr>
+              <tr><td><code>lg</code></td><td><code>min-width: 1224px</code></td><td>Escritorio grande</td></tr>
+            </tbody>
+          </table>
+
+          <h3 class="u-mb-16 u-mt-24 u-fw-600">Ejemplos de uso:</h3>
+          <table class="sizes-docs__table">
+            <thead>
+              <tr>
+                <th>Clase</th>
+                <th>CSS generado</th>
+                <th>Uso típico</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>.u-height-32</code></td>
+                <td><code>height: 32px !important</code></td>
+                <td>Altura fija de un icono o avatar</td>
+              </tr>
+              <tr>
+                <td><code>.u-height-48</code></td>
+                <td><code>height: 48px !important</code></td>
+                <td>Altura estándar de un botón o input</td>
+              </tr>
+              <tr>
+                <td><code>.u-width-100</code></td>
+                <td><code>width: 100% !important</code></td>
+                <td>Elemento que ocupa todo el ancho del contenedor</td>
+              </tr>
+              <tr>
+                <td><code>.u-width-50</code></td>
+                <td><code>width: 50% !important</code></td>
+                <td>Mitad del contenedor padre</td>
+              </tr>
+              <tr>
+                <td><code>.u-height-lg-40</code></td>
+                <td><code>@media (min-width: 1224px) &#123; height: 40px !important &#125;</code></td>
+                <td>Altura diferente sólo en pantallas grandes</td>
+              </tr>
+              <tr>
+                <td><code>.u-width-sm-80</code></td>
+                <td><code>@media (min-width: 768px) &#123; width: 80% !important &#125;</code></td>
+                <td>Ancho reducido a partir de tablet</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="u-ds-flex u-dir-col u-dir-xl-row u-mt-16" style="gap:32px">
+            <div class="u-ds-flex u-dir-col">
+              <p class="u-fw-600">✔️ Forma correcta</p>
+              <ul class="sizes-docs__list">
+                <li>Usar <code>.u-width-100</code> para que un elemento ocupe todo el ancho disponible.</li>
+                <li>Combinar con breakpoints para adaptar dimensiones según el viewport.</li>
+                <li>Aplicar sobre elementos concretos donde el tamaño debe ser fijo o controlado.</li>
+              </ul>
+            </div>
+            <div class="u-ds-flex u-dir-col">
+              <p class="u-fw-600">❌ Usos prohibidos</p>
+              <ul class="sizes-docs__list">
+                <li>No usar si el tamaño debe derivarse del contenido o del layout (flexbox/grid).</li>
+                <li>No combinar <code>.u-height-*</code> con <code>min-height</code> inline sin control explícito.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Demo visual: altura -->
+          <h3 class="u-mb-16 u-mt-24 u-fw-600">Demo visual — altura:</h3>
+          <div class="sizes-docs__demo-group">
+            <div class="sizes-docs__demo-item">
+              <span class="sizes-docs__demo-label">.u-height-16</span>
+              <div class="sizes-docs__demo-container u-ds-flex u-align-end" style="height:80px">
+                <div class="sizes-docs__demo-bar" style="height:16px"><span>16px</span></div>
+              </div>
+            </div>
+            <div class="sizes-docs__demo-item">
+              <span class="sizes-docs__demo-label">.u-height-32</span>
+              <div class="sizes-docs__demo-container u-ds-flex u-align-end" style="height:80px">
+                <div class="sizes-docs__demo-bar" style="height:32px"><span>32px</span></div>
+              </div>
+            </div>
+            <div class="sizes-docs__demo-item">
+              <span class="sizes-docs__demo-label">.u-height-48</span>
+              <div class="sizes-docs__demo-container u-ds-flex u-align-end" style="height:80px">
+                <div class="sizes-docs__demo-bar" style="height:48px"><span>48px</span></div>
+              </div>
+            </div>
+            <div class="sizes-docs__demo-item">
+              <span class="sizes-docs__demo-label">.u-height-64</span>
+              <div class="sizes-docs__demo-container u-ds-flex u-align-end" style="height:80px">
+                <div class="sizes-docs__demo-bar" style="height:64px"><span>64px</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Demo visual: ancho -->
+          <h3 class="u-mb-16 u-mt-24 u-fw-600">Demo visual — ancho:</h3>
+          <div class="sizes-docs__demo-group sizes-docs__demo-group--col">
+            <div class="sizes-docs__demo-item sizes-docs__demo-item--full">
+              <span class="sizes-docs__demo-label">.u-width-25</span>
+              <div class="sizes-docs__demo-container">
+                <div class="sizes-docs__demo-bar sizes-docs__demo-bar--horizontal" style="width:25%"><span>25%</span></div>
+              </div>
+            </div>
+            <div class="sizes-docs__demo-item sizes-docs__demo-item--full">
+              <span class="sizes-docs__demo-label">.u-width-50</span>
+              <div class="sizes-docs__demo-container">
+                <div class="sizes-docs__demo-bar sizes-docs__demo-bar--horizontal" style="width:50%"><span>50%</span></div>
+              </div>
+            </div>
+            <div class="sizes-docs__demo-item sizes-docs__demo-item--full">
+              <span class="sizes-docs__demo-label">.u-width-75</span>
+              <div class="sizes-docs__demo-container">
+                <div class="sizes-docs__demo-bar sizes-docs__demo-bar--horizontal" style="width:75%"><span>75%</span></div>
+              </div>
+            </div>
+            <div class="sizes-docs__demo-item sizes-docs__demo-item--full">
+              <span class="sizes-docs__demo-label">.u-width-100</span>
+              <div class="sizes-docs__demo-container">
+                <div class="sizes-docs__demo-bar sizes-docs__demo-bar--horizontal" style="width:100%"><span>100%</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </details>
+    </article>
+
+    <!-- spaces.scss -->
+    <article class="sizes-docs__panel">
+      <details class="e-summary">
+        <summary class="e-summary__trigger">
+          <h2 class="e-summary__title u-mb-0">Márgenes y paddings</h2>
+          <img class="e-summary__icon" src="assets/img/icon-system-chevdrondown.svg" alt="Expandir">
+        </summary>
+        <div class="e-summary__content u-mt-16">
+
+          <p class="u-mb-16">
+            Permite establecer <strong>márgenes</strong> y <strong>paddings</strong> en todas las direcciones.
+            Las clases siguen el patrón <code>.u-&#123;propiedad&#125;&#123;dirección&#125;-&#123;valor&#125;</code>
+            y admiten breakpoint con <code>.u-&#123;propiedad&#125;&#123;dirección&#125;-&#123;bp&#125;-&#123;valor&#125;</code>.
+          </p>
+
+          <h3 class="u-mb-16 u-fw-600">Direcciones disponibles:</h3>
+          <table class="sizes-docs__table">
+            <thead>
+              <tr>
+                <th>Sufijo</th>
+                <th>Propiedad</th>
+                <th>Aplica a</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><em>ninguno</em></td><td><code>margin / padding</code></td><td>Los 4 lados</td></tr>
+              <tr><td><code>t</code></td><td><code>margin-top / padding-top</code></td><td>Superior</td></tr>
+              <tr><td><code>b</code></td><td><code>margin-bottom / padding-bottom</code></td><td>Inferior</td></tr>
+              <tr><td><code>s</code></td><td><code>margin-inline-start / padding-inline-start</code></td><td>Inicio lógico (izquierda en LTR)</td></tr>
+              <tr><td><code>e</code></td><td><code>margin-inline-end / padding-inline-end</code></td><td>Fin lógico (derecha en LTR)</td></tr>
+              <tr><td><code>x</code></td><td><code>margin-left + right / padding-left + right</code></td><td>Eje horizontal</td></tr>
+              <tr><td><code>y</code></td><td><code>margin-top + bottom / padding-top + bottom</code></td><td>Eje vertical</td></tr>
+            </tbody>
+          </table>
+
+          <h3 class="u-mb-16 u-mt-24 u-fw-600">Ejemplos de uso:</h3>
+          <table class="sizes-docs__table">
+            <thead>
+              <tr>
+                <th>Clase</th>
+                <th>CSS generado</th>
+                <th>Uso típico</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>.u-m-16</code></td>
+                <td><code>margin: 16px !important</code></td>
+                <td>Margen uniforme alrededor del elemento</td>
+              </tr>
+              <tr>
+                <td><code>.u-mt-8</code></td>
+                <td><code>margin-top: 8px !important</code></td>
+                <td>Separación superior entre secciones</td>
+              </tr>
+              <tr>
+                <td><code>.u-mb-24</code></td>
+                <td><code>margin-bottom: 24px !important</code></td>
+                <td>Espaciado inferior de un bloque</td>
+              </tr>
+              <tr>
+                <td><code>.u-px-12</code></td>
+                <td><code>padding-left: 12px !important; padding-right: 12px !important</code></td>
+                <td>Relleno horizontal en botones o chips</td>
+              </tr>
+              <tr>
+                <td><code>.u-py-8</code></td>
+                <td><code>padding-top: 8px !important; padding-bottom: 8px !important</code></td>
+                <td>Relleno vertical en filas de tabla</td>
+              </tr>
+              <tr>
+                <td><code>.u-mx-auto</code></td>
+                <td><code>margin-left: auto !important; margin-right: auto !important</code></td>
+                <td>Centrado horizontal de un bloque</td>
+              </tr>
+              <tr>
+                <td><code>.u-my-md-24</code></td>
+                <td><code>@media (min-width: 992px) &#123; margin-top: 24px !important; margin-bottom: 24px !important &#125;</code></td>
+                <td>Separación vertical mayor en escritorio</td>
+              </tr>
+              <tr>
+                <td><code>.u-ps-16</code></td>
+                <td><code>margin-inline-start: 16px !important</code></td>
+                <td>Sangría de inicio compatible con RTL</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="u-ds-flex u-dir-col u-dir-xl-row u-mt-16" style="gap:32px">
+            <div class="u-ds-flex u-dir-col">
+              <p class="u-fw-600">✔️ Forma correcta</p>
+              <ul class="sizes-docs__list">
+                <li>Usar <code>.u-mx-auto</code> para centrar horizontalmente elementos de ancho fijo.</li>
+                <li>Combinar dirección y breakpoint: <code>.u-mt-md-24</code> para separación superior sólo en escritorio.</li>
+                <li>Preferir <code>.u-px-*</code> y <code>.u-py-*</code> sobre <code>.u-p-*</code> cuando el espaciado no es uniforme.</li>
+              </ul>
+            </div>
+            <div class="u-ds-flex u-dir-col">
+              <p class="u-fw-600">❌ Usos prohibidos</p>
+              <ul class="sizes-docs__list">
+                <li>No usar <code>.u-m-*</code> para crear separación entre componentes hermanos; usar gap en el contenedor.</li>
+                <li>No acumular múltiples clases de margen en el mismo eje sin verificar que no se solapan.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Demo visual: márgenes -->
+          <h3 class="u-mb-16 u-mt-24 u-fw-600">Demo visual — márgen:</h3>
+          <div class="sizes-docs__demo-group">
+            <div class="sizes-docs__demo-item">
+              <span class="sizes-docs__demo-label">.u-m-8</span>
+              <div class="sizes-docs__demo-container">
+                <div class="sizes-docs__demo-space" style="margin:8px">
+                  <div class="sizes-docs__demo-box">contenido</div>
+                </div>
+              </div>
+            </div>
+            <div class="sizes-docs__demo-item">
+              <span class="sizes-docs__demo-label">.u-mt-16</span>
+              <div class="sizes-docs__demo-container">
+                <div class="sizes-docs__demo-space" style="margin-top:16px">
+                  <div class="sizes-docs__demo-box">contenido</div>
+                </div>
+              </div>
+            </div>
+            <div class="sizes-docs__demo-item">
+              <span class="sizes-docs__demo-label">.u-mx-24</span>
+              <div class="sizes-docs__demo-container">
+                <div class="sizes-docs__demo-space" style="margin-left:24px; margin-right:24px">
+                  <div class="sizes-docs__demo-box">contenido</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Demo visual: padding -->
+          <h3 class="u-mb-16 u-mt-24 u-fw-600">Demo visual — padding:</h3>
+          <div class="sizes-docs__demo-group">
+            <div class="sizes-docs__demo-item">
+              <span class="sizes-docs__demo-label">.u-p-8</span>
+              <div class="sizes-docs__demo-container">
+                <div class="sizes-docs__demo-padding" style="padding:8px">
+                  <div class="sizes-docs__demo-box">contenido</div>
+                </div>
+              </div>
+            </div>
+            <div class="sizes-docs__demo-item">
+              <span class="sizes-docs__demo-label">.u-px-24</span>
+              <div class="sizes-docs__demo-container">
+                <div class="sizes-docs__demo-padding" style="padding-left:24px; padding-right:24px">
+                  <div class="sizes-docs__demo-box">contenido</div>
+                </div>
+              </div>
+            </div>
+            <div class="sizes-docs__demo-item">
+              <span class="sizes-docs__demo-label">.u-py-16</span>
+              <div class="sizes-docs__demo-container">
+                <div class="sizes-docs__demo-padding" style="padding-top:16px; padding-bottom:16px">
+                  <div class="sizes-docs__demo-box">contenido</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </details>
+    </article>
+
+  </div>
+</section>

@@ -1,0 +1,17 @@
+<header>
+  <div class="header">
+    <div class="header__container">
+      <div class="header__logo">
+        <a href="/" >
+          <img src="../../../assets/img/desktop-logo.svg" alt="" *ngIf="!mobile">
+          <img src="../../../assets/img/mobile-logo.svg" alt="" *ngIf="mobile">
+        </a>
+      </div>
+      <div class="header__items">
+        <img src="../../../assets/img/spain.svg" alt="Spain flag" class="header__flag" [class.header__flag--active]="currentLang === 'es'" (click)="setLang('es')">
+        <img src="../../../assets/img/uk.svg" alt="UK flag" class="header__flag" [class.header__flag--active]="currentLang === 'en'" (click)="setLang('en')">
+        <img src="../../../assets/img/italy.svg" alt="Italy flag" class="header__flag">
+      </div>
+    </div>
+  </div>
+</header>

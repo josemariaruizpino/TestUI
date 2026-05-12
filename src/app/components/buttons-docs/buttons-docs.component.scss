@@ -1,0 +1,184 @@
+@use "../../../assets/scss/all-generics.scss" as *;
+
+.buttons-docs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &__hero,
+  &__panel {
+    background-color: #ffffff;
+    border: 1px solid #dce8f5;
+    border-radius: 18px;
+    padding: 24px;
+  }
+
+  &__panel--playground {
+    max-height: 85vh;
+    overflow-y: auto;
+    height: fit-content;
+  }
+
+  &__eyebrow {
+    color: #009fc7;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    color: #16314f;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  &__description,
+  &__panel p,
+  &__list {
+    color: #4a6481;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  &__content {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 60% 40%;
+
+    @media screen and (min-width: 1600px) {
+          grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__panel--full {
+    grid-column: 1 / -1;
+  }
+
+  h2 {
+    color: #143152;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  &__playground {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__snippetHeader {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  &__snippetLabel {
+    color: #4a6481;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__copyButton {
+    background-color: #143152;
+    border: 0;
+    border-radius: 999px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 14px;
+  }
+
+  &__removeBreakpoint {
+    align-self: center;
+    background: none;
+    border: 1px solid #dce8f5;
+    color: #4a6481;
+    cursor: pointer;
+    font-size: 12px;
+    height: 24px;
+    line-height: 1;
+    padding: 0 8px;
+
+    &:hover {
+      background-color: #fdecea;
+      border-color: #e57373;
+      color: #c62828;
+    }
+  }
+
+  &__codeBlock {
+    background-color: #0f1f33;
+    border-radius: 14px;
+    color: #f4f8fc;
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-x: auto;
+    padding: 16px;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  &__exampleButton {
+    border: 1px solid transparent;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 18px;
+
+    &--primary {
+      background-color: #009fc7;
+      color: #ffffff;
+    }
+
+    &--secondary {
+      background-color: #e7f4fb;
+      color: #015368;
+    }
+
+    &--ghost {
+      background-color: transparent;
+      border-color: #c4d9ed;
+      color: #143152;
+    }
+  }
+
+  &__list {
+    list-style: disc;
+    margin-left: 20px;
+  }
+
+  .e-select{
+    &__field{
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>');
+        background-repeat: no-repeat;
+        background-position: calc(100% - 15px) center; /* Aquí controlas la distancia desde la derecha */
+        background-size: 16px;
+    }    
+  }
+}
+
+@media (max-width: 768px) {
+  .buttons-docs {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__content {
+      grid-template-columns: 1fr;
+    }
+
+    &__panel--full {
+      grid-column: auto;
+    }
+  }
+}

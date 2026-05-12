@@ -1,0 +1,69 @@
+<button
+  type="button"
+  class="sidebar__hamburger"
+  [class.sidebar__hamburger--hidden]="isMobileOpen"
+  (click)="toggleMobile()"
+  aria-label="Abrir menú"
+>
+  <span class="sidebar__hamburger-bar"></span>
+  <span class="sidebar__hamburger-bar"></span>
+  <span class="sidebar__hamburger-bar"></span>
+</button>
+
+<div class="sidebar__backdrop" *ngIf="isMobileOpen" (click)="closeMobileMenu()"></div>
+
+<aside class="sidebar" [class.sidebar--collapsed]="isSidebarCollapsed" [class.sidebar--mobile-open]="isMobileOpen" aria-label="Documentation navigation">
+  <div class="sidebar__top">
+    <p class="sidebar__title" *ngIf="!isSidebarCollapsed">Visual guidelines</p>
+    <button
+      type="button"
+      class="sidebar__collapseButton"
+      (click)="handleCollapseClick()"
+      [attr.aria-label]="isSidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'"
+      [attr.aria-expanded]="!isSidebarCollapsed"
+    >
+      <span [class.sidebar__icon--collapsed]="isSidebarCollapsed">❮</span>
+    </button>
+  </div>
+
+  <nav class="sidebar__nav">
+    <ul class="sidebar__sectionList">
+      <li class="sidebar__section" *ngFor="let section of sections; let i = index">
+        <button
+          type="button"
+          class="sidebar__sectionButton"
+          [class.sidebar__sectionButton--collapsed]="isSidebarCollapsed"
+          (click)="toggleSection(i)"
+          [attr.aria-expanded]="!isSidebarCollapsed && section.expanded"
+          [attr.aria-label]="section.title"
+        >
+          <span class="sidebar__sectionText" *ngIf="!isSidebarCollapsed">{{ section.title }}</span>
+          <span class="sidebar__sectionText" *ngIf="isSidebarCollapsed">{{ section.title.charAt(0) }}</span>
+          <img class="sidebar__chevron" *ngIf="!isSidebarCollapsed" [class.sidebar__chevron--open]="section.expanded" src="assets/img/icon-system-chevdrondown.svg" alt="">
+        </button>
+
+        <ul class="sidebar__itemList" *ngIf="!isSidebarCollapsed && section.expanded">
+          <li class="sidebar__item" *ngFor="let item of section.items">
+            <button
+              *ngIf="item.route; else staticItem"
+              class="sidebar__itemButton"
+              [routerLink]="item.route"
+              routerLinkActive="sidebar__itemButton--active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >{{ item.label }}</button>
+
+            <ng-template #staticItem>
+              <button type="button" class="sidebar__itemButton" (click)="closeMobileMenu()">{{ item.label }}</button>
+            </ng-template>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <a class="logo" href="https://www.figma.com/design/sOoyxzIhS63o7hppGRrNf5/design-system-rastreator?node-id=0-1&m=dev" target="_blank" rel="noopener noreferrer">
+    <div class="logo__container">
+  <img src="/assets/img/figma_logo.svg" class="figma" [class.collapsed]="isSidebarCollapsed" alt="Figma logo">
+    </div>
+  </a>
+
+</aside>

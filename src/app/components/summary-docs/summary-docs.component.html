@@ -1,0 +1,97 @@
+<section class="summary-docs" aria-label="Summary documentation">
+  <div class="summary-docs__hero">
+    <p class="summary-docs__eyebrow">Elements / Summary</p>
+    <h1 class="summary-docs__title">Summary</h1>
+    <p class="summary-docs__description">
+      Componente desplegable basado en el elemento nativo <code>&lt;details&gt;</code>. Selecciona una variante para ver su preview, su código HTML y poder copiarlo al portapapeles.
+    </p>
+  </div>
+
+  <div class="summary-docs__content">
+    <article class="summary-docs__panel summary-docs__panel--playground">
+      <h2>Playground</h2>
+
+      <div class="u-ds-flex u-align-center">
+        <div class="e-select u-width-50">
+          <div class="e-select__wrapper">
+            <label class="e-select__label u-mt-16" for="summary-variant">Selecciona una variante</label>
+            <select
+              id="summary-variant"
+              class="e-select__field u-mb-16"
+              [value]="selectedVariant"
+              (change)="onVariantChange($any($event.target).value)"
+            >
+              <option value="Default">Default</option>
+              <option value="Secondary">Secondary</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div style="display: flex; flex-direction: column; gap: 16px">
+      <article class="summary-docs__panel">
+        <h2>Previsualización del elemento</h2>
+        <div class="summary-docs__playground">
+          <details *ngIf="selectedVariant === 'Default'" class="e-summary">
+            <summary class="e-summary__trigger">
+              <span class="e-summary__icon">&#9662;</span>
+              <p class="e-summary__title">Más información</p>
+            </summary>
+            <div class="e-summary__content">
+              Contenido desplegable con texto descriptivo. Puedes incluir
+              <a href="#" class="e-summary__link">enlaces</a> dentro.
+            </div>
+          </details>
+
+          <details *ngIf="selectedVariant === 'Secondary'" class="e-summary e-summary--secondary">
+            <summary class="e-summary__trigger">
+              <span class="e-summary__icon">&#9662;</span>
+              <p class="e-summary__title">Ver detalles</p>
+            </summary>
+            <div class="e-summary__content">
+              Variante secundaria con tipografía enfatizada y color de acento. Ideal para llamar la atención sobre ayudas o información ampliada.
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <article class="summary-docs__panel">
+        <h2>Estructura Html</h2>
+        <div class="summary-docs__snippetHeader">
+          <span class="summary-docs__snippetLabel">Código para {{ selectedVariant }}</span>
+          <button type="button" class="summary-docs__copyButton" (click)="copySnippet()">{{ copyFeedback }}</button>
+        </div>
+        <pre class="summary-docs__codeBlock"><code>{{ selectedSnippet }}</code></pre>
+      </article>
+          <article class="summary-docs__panel summary-docs__panel--full guide">
+      <details class="e-summary">
+        <summary class="e-summary__trigger">
+          <h2 class="e-summary__title u-mb-0">Guía de uso</h2>
+          <img class="e-summary__icon" src="assets/img/icon-system-chevdrondown.svg" alt="Expandir">
+        </summary>
+        <div class="e-summary__content u-mt-16">
+          <div class="u-ds-flex u-dir-col u-dir-xl-row" style="gap:32px">
+            <div class="u-ds-flex u-dir-col">
+              <p class="u-fw-600">✔️ Forma correcta</p>
+              <ul class="summary-docs__list">
+                <li>Usar el elemento nativo <code>&lt;details&gt;</code> con el <code>&lt;summary&gt;</code> como trigger.</li>
+                <li>Mantener la estructura BEM: <code>.e-summary</code>, <code>.e-summary__trigger</code>, <code>.e-summary__title</code>, <code>.e-summary__icon</code> y <code>.e-summary__content</code>.</li>
+                <li>Aplicar <code>.e-summary--secondary</code> cuando se quiera enfatizar el desplegable.</li>
+              </ul>
+            </div>
+            <div class="u-ds-flex u-dir-col">
+              <p class="u-fw-600">❌ Usos prohibidos</p>
+              <ul class="summary-docs__list">
+                <li>No sustituir <code>&lt;details&gt;</code> por <code>div</code> con JS para imitar su comportamiento.</li>
+                <li>No anidar varios <code>&lt;summary&gt;</code> dentro del mismo <code>&lt;details&gt;</code>.</li>
+                <li>No quitar el icono indicador (<code>.e-summary__icon</code>) que comunica el estado.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </details>
+    </article>
+    </div>
+  </div>
+</section>

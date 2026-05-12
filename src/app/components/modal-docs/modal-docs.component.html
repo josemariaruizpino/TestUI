@@ -1,0 +1,105 @@
+<section class="modal-docs" aria-label="Modal documentation">
+  <div class="modal-docs__hero">
+    <p class="modal-docs__eyebrow">Components / Modal</p>
+    <h1 class="modal-docs__title">Modal</h1>
+    <p class="modal-docs__description">
+      Componente de diálogo basado en el elemento nativo <code>&lt;dialog&gt;</code>. Permite mostrar contenido emergente
+      de forma accesible y consistente con el design system de Rastreator.
+    </p>
+  </div>
+
+  <div class="modal-docs__content">
+
+    <article class="modal-docs__panel modal-docs__panel--playground">
+      <h2>Playground</h2>
+
+      <div class="u-ds-flex u-align-center">
+        <button class="e-btn--primary u-width-25 u-mt-12" commandfor="dialog-docs-1" command="show-modal">
+          Abrir Modal
+        </button>
+      </div>
+
+      <dialog id="dialog-docs-1" class="c-modal" closedby="any">
+        <button class="exit" commandfor="dialog-docs-1" command="close">
+          <img class="exit-icon" src="assets/img/icon-system-cancel.svg" alt="Cerrar">
+        </button>
+        <div class="c-modal__content">
+          <div class="c-modal__headcontainer">
+            <p class="c-modal__title">Soy el título.</p>
+            <p class="c-modal__subtitle">Soy un subtítulo de prueba con un texto largo.</p>
+          </div>
+          <div class="c-modal__maincontent">
+            <p class="u-m-0">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio esse
+              laudantium recusandae at quisquam. Labore nulla minus amet cupiditate id
+              fuga delectus sunt, fugiat, soluta necessitatibus consectetur tempora?
+            </p>
+          </div>
+        </div>
+      </dialog>
+    </article>
+
+      <article class="modal-docs__panel">
+        <h2>Estructura Html</h2>
+        <div class="modal-docs__snippetHeader">
+          <span class="modal-docs__snippetLabel">Código — Modal</span>
+          <button type="button" class="modal-docs__copyButton" (click)="copySnippet()">{{ copyFeedback }}</button>
+        </div>
+        <pre class="modal-docs__codeBlock"><code>{{ snippet }}</code></pre>
+      </article>
+
+      <article class="modal-docs__panel">
+        <details class="e-summary">
+          <summary class="e-summary__trigger">
+            <h2 class="e-summary__title u-mb-0">Guía de uso</h2>
+            <img class="e-summary__icon" src="assets/img/icon-system-chevdrondown.svg" alt="Expandir">
+          </summary>
+          <div class="e-summary__content u-mt-16">
+
+            <h3 class="u-mb-16 u-fw-600">Estructura básica:</h3>
+            <table class="modal-docs__table">
+              <thead>
+                <tr>
+                  <th>Elemento / Clase</th>
+                  <th>Descripción</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><code>.c-modal</code></td><td>Contenedor principal del modal. Controla dimensiones, fondo y posicionamiento.</td></tr>
+                <tr><td><code>.c-modal[open]</code></td><td>Estado visible del modal. Se muestra centrado y ajustado al viewport.</td></tr>
+                <tr><td><code>.c-modal::backdrop</code></td><td>Capa de fondo semitransparente que oscurece el contenido.</td></tr>
+                <tr><td><code>.c-modal__content</code></td><td>Contenedor interno del contenido del modal (texto, imágenes, botones, etc.).</td></tr>
+                <tr><td><code>.c-modal__headcontainer</code></td><td>Agrupa título y subtítulo del modal.</td></tr>
+                <tr><td><code>.c-modal__title</code></td><td>Título principal del modal. Tipografía y tamaño adaptativos.</td></tr>
+                <tr><td><code>.c-modal__subtitle</code></td><td>Subtítulo o descripción corta.</td></tr>
+                <tr><td><code>.c-modal__maincontent</code></td><td>Área principal del contenido (scrollable si es extenso).</td></tr>
+                <tr><td><code>.exit</code></td><td>Botón para cerrar el modal.</td></tr>
+                <tr><td><code>.exit-icon</code></td><td>Ícono SVG o imagen dentro del botón de salida.</td></tr>
+              </tbody>
+            </table>
+            <div class="u-ds-flex u-dir-col u-dir-xl-row u-mt-16" style="gap:32px">
+              <div class="u-ds-flex u-dir-col">
+                <p class="u-fw-600">✔️ Forma correcta</p>
+                <ul class="modal-docs__list">
+                  <li>Usar el elemento nativo <code>&lt;dialog&gt;</code> para mejorar accesibilidad y rendimiento.</li>
+                  <li>Usar <code>command="show-modal"</code> y <code>commandfor</code> para abrir el modal.</li>
+                  <li>Usar <code>command="close"</code> en el botón de cierre.</li>
+                  <li>Añadir <code>closedby="any"</code> para cerrar al hacer clic fuera o pulsar Esc.</li>
+                </ul>
+              </div>
+              <div class="u-ds-flex u-dir-col">
+                <p class="u-fw-600">❌ Usos prohibidos</p>
+                <ul class="modal-docs__list">
+                  <li>No sustituir <code>&lt;dialog&gt;</code> por <code>div</code> con JS para imitar su comportamiento.</li>
+                  <li>No omitir el botón de cierre <code>.exit</code>.</li>
+                  <li>No usar el modal sin <code>closedby</code> si se quiere soporte de cierre por backdrop.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </details>
+      </article>
+
+  </div>
+</section>

@@ -31,7 +31,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/scss/core-itcss.css",
+              "src/assets/scss/inputs-elements.scss",
+              "src/assets/scss/summary-elements.scss"
             ],
             "scripts": []
           },
@@ -99,7 +102,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/scss/core-itcss.css",
+              "src/assets/scss/iconfont.css",
+              "src/assets/scss/inputs-elements.scss",
+              "src/assets/scss/summary-elements.scss"
             ],
             "scripts": []
           }

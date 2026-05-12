@@ -1,0 +1,38 @@
+:host {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.docs-layout {
+	background:
+		radial-gradient(circle at 90% 10%, rgba(0, 159, 199, 0.1), transparent 45%),
+		linear-gradient(180deg, #f7fafc 0%, #eff5fb 100%);
+	display: flex;
+	flex: 1;
+	overflow: hidden;
+
+	&__sidebar {
+		box-shadow: 2px 0 10px rgba(20, 49, 82, 0.08);
+		flex-shrink: 0;
+		overflow-y: auto;
+	}
+
+	&__content {
+		flex: 1;
+		min-width: 0;
+		overflow-y: auto;
+		padding: 28px;
+	}
+}
+
+@media (max-width: 768px) {
+	.docs-layout {
+		flex-direction: column;
+
+		&__content {
+			padding: 18px;
+		}
+	}
+}

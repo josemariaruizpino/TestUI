@@ -1,0 +1,163 @@
+<section class="fonts-docs" aria-label="fonts documentation">
+  <div class="fonts-docs__hero">
+    <p class="fonts-docs__eyebrow">Elements / Fonts</p>
+    <h1 class="fonts-docs__title">Fonts</h1>
+    <p class="fonts-docs__description">
+      Utilidades CSS para controlar las fuentes y tipografías. Todas las clases soportan el sistema
+      responsive con los mismos breakpoints definidos en Settings.
+    </p>
+  </div>
+
+  <div class="fonts-docs__content">
+
+    <article class="fonts-docs__panel">
+      <details class="e-summary" open> 
+        <summary class="e-summary__trigger">
+          <h2 class="e-summary__title u-mb-0">Fonts utilities</h2>
+          <img class="e-summary__icon" src="assets/img/icon-system-chevdrondown.svg" alt="Expandir">
+        </summary>
+        <div class="e-summary__content u-mt-16">
+
+          <p class="u-mb-16">
+            Utilidades para controlar <code>font-size</code>, <code>font-weight</code> y <code>text-align</code>.
+            Las clases siguen el patrón <code>.u-&#123;propiedad&#125;-&#123;valor&#125;</code>
+            y admiten modificador de breakpoint <code>.u-&#123;propiedad&#125;-&#123;bp&#125;-&#123;valor&#125;</code>.
+          </p>
+
+          <h3 class="u-mb-16 u-fw-600">Breakpoints disponibles:</h3>
+          <table class="fonts-docs__table">
+            <thead>
+              <tr>
+                <th>Sufijo</th>
+                <th>Breakpoint</th>
+                <th>Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>xs</code></td><td><code>0</code></td><td>Sin media query, base mobile-first</td></tr>
+              <tr><td><code>sm</code></td><td><code>min-width: 768px</code></td><td>Tablet en adelante</td></tr>
+              <tr><td><code>md</code></td><td><code>min-width: 992px</code></td><td>Escritorio pequeño</td></tr>
+              <tr><td><code>lg</code></td><td><code>min-width: 1224px</code></td><td>Escritorio grande</td></tr>
+              <tr><td><code>xl</code></td><td><code>min-width: 1919px</code></td><td>Pantalla extra grande</td></tr>
+              <tr><td><code>xxl</code></td><td><code>min-width: 2000px</code></td><td>Pantalla ultra ancha</td></tr>
+            </tbody>
+          </table>
+
+          <!-- Font Size -->
+          <h3 class="u-mb-16 u-mt-24 u-fw-600">Font Size — <code>u-fs-*</code>:</h3>
+          <table class="fonts-docs__table">
+            <thead>
+              <tr>
+                <th>Clase</th>
+                <th>CSS generado</th>
+                <th>Previsualización</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>.u-fs-8</code></td><td><code>font-size: 8px</code></td><td><span class="u-fs-8">Texto de muestra</span></td></tr>
+              <tr><td><code>.u-fs-10</code></td><td><code>font-size: 10px</code></td><td><span class="u-fs-10">Texto de muestra</span></td></tr>
+              <tr><td><code>.u-fs-12</code></td><td><code>font-size: 12px</code></td><td><span class="u-fs-12">Texto de muestra</span></td></tr>
+              <tr><td><code>.u-fs-14</code></td><td><code>font-size: 14px</code></td><td><span class="u-fs-14">Texto de muestra</span></td></tr>
+              <tr><td><code>.u-fs-16</code></td><td><code>font-size: 16px</code></td><td><span class="u-fs-16">Texto de muestra</span></td></tr>
+              <tr><td><code>.u-fs-18</code></td><td><code>font-size: 18px</code></td><td><span class="u-fs-18">Texto de muestra</span></td></tr>
+              <tr><td><code>.u-fs-20</code></td><td><code>font-size: 20px</code></td><td><span class="u-fs-20">Texto de muestra</span></td></tr>
+              <tr><td><code>.u-fs-22</code></td><td><code>font-size: 22px</code></td><td><span class="u-fs-22">Texto de muestra</span></td></tr>
+              <tr><td><code>.u-fs-24</code></td><td><code>font-size: 24px</code></td><td><span class="u-fs-24">Texto de muestra</span></td></tr>
+              <tr><td><code>.u-fs-26</code></td><td><code>font-size: 26px</code></td><td><span class="u-fs-26">Texto de muestra</span></td></tr>
+              <tr><td><code>.u-fs-28</code></td><td><code>font-size: 28px</code></td><td><span class="u-fs-28">Texto de muestra</span></td></tr>
+              <tr><td><code>.u-fs-sm-16</code></td><td><code>@media (min-width: 768px) &#123; font-size: 16px &#125;</code></td><td>Responsive a partir de tablet</td></tr>
+            </tbody>
+          </table>
+          <h3 class="u-mb-16 u-mt-24 u-fw-600">Font Weight — <code>u-fw-*</code>:</h3>
+          <table class="fonts-docs__table">
+            <thead>
+              <tr>
+                <th>Clase</th>
+                <th>CSS generado</th>
+                <th>Previsualización</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>.u-fw-100</code></td><td><code>font-weight: 100</code></td><td><span class="u-fw-100 u-fs-16">Texto de muestra</span></td></tr>
+              <tr><td><code>.u-fw-200</code></td><td><code>font-weight: 200</code></td><td><span class="u-fw-200 u-fs-16">Texto de muestra</span></td></tr>
+              <tr><td><code>.u-fw-300</code></td><td><code>font-weight: 300</code></td><td><span class="u-fw-300 u-fs-16">Texto de muestra</span></td></tr>
+              <tr><td><code>.u-fw-400</code></td><td><code>font-weight: 400</code></td><td><span class="u-fw-400 u-fs-16">Texto de muestra</span></td></tr>
+              <tr><td><code>.u-fw-500</code></td><td><code>font-weight: 500</code></td><td><span class="u-fw-500 u-fs-16">Texto de muestra</span></td></tr>
+              <tr><td><code>.u-fw-600</code></td><td><code>font-weight: 600</code></td><td><span class="u-fw-600 u-fs-16">Texto de muestra</span></td></tr>
+              <tr><td><code>.u-fw-700</code></td><td><code>font-weight: 700</code></td><td><span class="u-fw-700 u-fs-16">Texto de muestra</span></td></tr>
+              <tr><td><code>.u-fw-800</code></td><td><code>font-weight: 800</code></td><td><span class="u-fw-800 u-fs-16">Texto de muestra</span></td></tr>
+              <tr><td><code>.u-fw-900</code></td><td><code>font-weight: 900</code></td><td><span class="u-fw-900 u-fs-16">Texto de muestra</span></td></tr>
+              <tr><td><code>.u-fw-md-600</code></td><td><code>@media (min-width: 992px) &#123; font-weight: 600 &#125;</code></td><td>Responsive a partir de escritorio</td></tr>
+            </tbody>
+          </table>
+          <h3 class="u-mb-16 u-mt-24 u-fw-600">Text Align — <code>u-ta-*</code>:</h3>
+          <table class="fonts-docs__table">
+            <thead>
+              <tr>
+                <th>Clase</th>
+                <th>CSS generado</th>
+                <th>Uso típico</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>.u-ta-left</code></td><td><code>text-align: left</code></td><td>Alineación izquierda (valor por defecto)</td></tr>
+              <tr><td><code>.u-ta-center</code></td><td><code>text-align: center</code></td><td>Texto centrado, útil en títulos o banners</td></tr>
+              <tr><td><code>.u-ta-right</code></td><td><code>text-align: right</code></td><td>Alineación derecha, útil en cifras o precios</td></tr>
+              <tr><td><code>.u-ta-justify</code></td><td><code>text-align: justify</code></td><td>Texto justificado para bloques largos</td></tr>
+              <tr><td><code>.u-ta-sm-left</code></td><td><code>@media (min-width: 768px) &#123; text-align: left &#125;</code></td><td>Responsive a partir de tablet</td></tr>
+            </tbody>
+          </table>
+
+          <div class="fonts-docs__demo-group fonts-docs__demo-group--col u-mt-16">
+            <div class="fonts-docs__demo-item fonts-docs__demo-item--wide">
+              <span class="fonts-docs__demo-label">.u-ta-left</span>
+              <div class="fonts-docs__demo-container">
+                <p class="u-ta-left u-m-0 u-width-100">The quick brown fox jumps over the lazy dog.</p>
+              </div>
+            </div>
+            <div class="fonts-docs__demo-item fonts-docs__demo-item--wide">
+              <span class="fonts-docs__demo-label">.u-ta-center</span>
+              <div class="fonts-docs__demo-container">
+                <p class="u-ta-center u-m-0 u-width-100">The quick brown fox jumps over the lazy dog.</p>
+              </div>
+            </div>
+            <div class="fonts-docs__demo-item fonts-docs__demo-item--wide">
+              <span class="fonts-docs__demo-label">.u-ta-right</span>
+              <div class="fonts-docs__demo-container">
+                <p class="u-ta-right u-m-0 u-width-100">The quick brown fox jumps over the lazy dog.</p>
+              </div>
+            </div>
+            <div class="fonts-docs__demo-item fonts-docs__demo-item--wide">
+              <span class="fonts-docs__demo-label">.u-ta-justify</span>
+              <div class="fonts-docs__demo-container">
+                <p class="u-ta-justify u-m-0 u-width-100">The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="u-ds-flex u-dir-col u-dir-xl-row u-mt-16" style="gap:32px">
+            <div class="u-ds-flex u-dir-col">
+              <p class="u-fw-600">✔️ Forma correcta</p>
+              <ul class="fonts-docs__list">
+                <li>Usar las clases utilitarias en lugar de estilos en línea para <code>font-size</code>, <code>font-weight</code> y <code>text-align</code>.</li>
+                <li>Combinar clases responsive para adaptar la tipografía en distintas resoluciones: <code>.u-fs-14 .u-fs-md-16</code>.</li>
+                <li>Usar el sufijo <code>xs</code> como base mobile-first y sobrescribir con breakpoints mayores.</li>
+                <li>Usar <code>.u-fw-600</code> o <code>.u-fw-700</code> para destacar títulos y etiquetas.</li>
+              </ul>
+            </div>
+            <div class="u-ds-flex u-dir-col">
+              <p class="u-fw-600">❌ Usos prohibidos</p>
+              <ul class="fonts-docs__list">
+                <li>No escribir <code>font-size</code>, <code>font-weight</code> ni <code>text-align</code> en línea si existe la clase utilitaria equivalente.</li>
+                <li>No crear clases ad-hoc para tamaños o pesos que ya están definidos en el mapa.</li>
+                <li>No añadir valores fuera de <code>$px-map</code>, <code>$fw-map</code> o <code>$ta-map</code> sin actualizar las variables del sistema.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </details>
+    </article>
+
+  </div>
+</section>

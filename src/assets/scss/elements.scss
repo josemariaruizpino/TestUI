@@ -1,0 +1,307 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    border: none;
+    width: 100%;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    height: 50px;
+    @media screen and (min-width: $screen-sm) {
+        height: 60px;
+    }
+    
+    &--primary{
+        @extend .btn;
+        background-color: $acent-green;
+        color: $color-white;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $acent-green-hover;
+        }
+    
+        &:active {
+            background-color: $acent-green-active;
+        }
+
+        &.square{
+            border-radius: 6px
+        }
+
+        &.disabled{
+            background-color: $color-grey-04;
+            cursor: default;
+        }
+    }
+
+    &--secondary{
+        @extend .btn;
+        background-color: $color-blue-02;
+        color: $color-white;
+        &:hover {
+            cursor: pointer;
+            background-color: $color-blue-02-hover;
+        }
+    
+        &:active {
+            background-color: $color-blue-02-active;
+        }
+
+        &.disabled{
+            background-color: $color-grey-04;
+            cursor: default;
+        }
+
+        &.square{
+            border-radius: 6px
+        }
+    }
+
+    &--terciary{
+        @extend .btn;
+        background-color: $color-white;
+        color: $color-blue-02;
+        border: 1px solid $color-blue-02;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #0142521A;
+        }
+    
+        &:active {
+            background-color: #01425233;
+        }
+
+        &.disabled{
+            background-color: $color-grey-04;
+            cursor: default;
+        }
+
+        &.square{
+            border-radius: 6px
+        }
+    }
+
+    &--rounded{
+        @extend .btn;
+        border: solid 1px $color-grey-04;
+        background-color: $color-white;
+        border-radius: 40px;
+        height: 31px;
+        width: 31px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+  
+        &:hover{
+          background-color: $color-grey-04;
+          cursor: pointer;
+        }
+
+        &.disabled{
+            background-color: $color-grey-04;
+            cursor: default;
+        }
+    }
+
+}
+
+.text-input {
+    border: 2px solid #E2EAF0;
+    padding: 15px 20px;
+    font-size: 16px;
+    color: #015368;
+    border-radius: 4px;
+    font-weight: 600;
+    line-height: normal;
+    width: 100%;
+    font-family: inherit;
+    font-variant-numeric: lining-nums;
+    
+    &::placeholder{
+        color: $color-grey-03;
+    }
+
+    &:focus {
+        border-color: #009FC7;
+        color: $color-blue-02;
+        outline: 0;
+    }
+
+    &:not(:placeholder-shown) {
+        color: $color-blue-02;
+    }
+
+    @media screen and (min-width: $screen-sm) {
+        padding: 19px 24px;
+    }
+    &.error{
+        border: 2px solid #A70000;
+    }
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+.checkbox {
+    height: auto;
+    display: block;
+
+    & input{
+        width: 0;
+        height: 0;
+        position: absolute;
+        opacity: 0;
+
+        &:hover{
+            cursor: default;
+        }
+
+        &:checked+.checkbox__container .checkmark{
+            background-color: $acent-green;
+            border: 2px solid $acent-green;
+        }
+    }
+
+    &__container{
+        position: relative;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 600;
+        color: #424B5A;
+        text-align: start;
+    }
+
+    & .checkmark{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        background-color: $color-white;
+        border-radius: 4px;
+        border: 2px solid #E2EAF0;
+        display: inline-block;
+
+      &.error{
+        border-color: #A70000;
+      }  
+        &::after{
+            top: 0;
+            left: 5px;
+            width: 7px;
+            height: 13px;
+            position: absolute;
+            content: "";
+            border: solid $color-white;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        &+span{
+            padding: 0 16px 0 36px;
+            display: inline-block;
+        }
+    }
+
+    &__txt{
+        font-size: 12px;
+        color: #181E28;
+        line-height: 18px;
+        font-weight: 400;
+        text-align: start;
+    }
+}
+
+.e-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+
+  &__label {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      &:checked~.e-checkbox__checkmark-container {
+        .e-checkbox__checkmark {
+          background-color: #3dd092;
+          border-color: #3dd092;
+
+          &::after {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  &__checkmark-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+  }
+
+  &__checkmark {
+    position: relative;
+    flex-shrink: 0;
+    height: 20px;
+    width: 20px;
+    background-color: $color-white;
+    border: 2px solid $color-grey-05;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 5px;
+      top: 1px;
+      width: 6px;
+      height: 11px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $color-grey-01 !important;
+  }
+
+  &__legal {
+    color: $color-grey-01;
+    text-decoration: underline;
+  }
+
+}

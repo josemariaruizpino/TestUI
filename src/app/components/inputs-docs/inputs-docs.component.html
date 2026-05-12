@@ -1,0 +1,153 @@
+<section class="inputs-docs" aria-label="Inputs documentation">
+  <div class="inputs-docs__hero">
+    <p class="inputs-docs__eyebrow">Elements / Inputs</p>
+    <h1 class="inputs-docs__title">Inputs</h1>
+    <p class="inputs-docs__description">
+      Documentación de inputs, selects y radios siguiendo la metodología BEM. Selecciona una variante para ver su preview, su código HTML y poder copiarlo al portapapeles.
+    </p>
+  </div>
+
+  <div class="inputs-docs__content">
+    <article class="inputs-docs__panel inputs-docs__panel--playground">
+      <h2>Playground</h2>
+
+      <div class="u-ds-flex u-align-center">
+        <div class="e-select u-width-50">
+          <div class="e-select__wrapper">
+            <label class="e-select__label u-mt-16" for="input-variant">Selecciona una variante</label>
+            <select
+              id="input-variant"
+              class="e-select__field u-mb-16"
+              [value]="selectedVariant"
+              (change)="onVariantChange($any($event.target).value)"
+            >
+              <option value="Basic">Input básico</option>
+              <option value="Magic">Input magic</option>
+              <option value="SelectMagic">Select magic</option>
+              <option value="Radio">Radio group</option>
+              <option value="Checkbox">Checkbox</option>
+            </select>
+          </div>
+        </div>
+
+        <label class="checkbox u-ms-24 u-mt-16" *ngIf="supportsError">
+          <input
+            type="checkbox"
+            name="error-variant"
+            [checked]="isErrorVariant"
+            (change)="onErrorVariantChange($any($event.target).checked)"
+          >
+          <div class="checkbox__container">
+            <span class="checkmark"></span>
+            <span class="checkbox__txt">Estado error</span>
+          </div>
+        </label>
+      </div>
+    </article>
+
+    <div style="display: flex; flex-direction: column; gap: 16px">
+      <article class="inputs-docs__panel"> 
+        <h2>Previsualización del elemento</h2>
+        <div class="inputs-docs__playground">
+          <div *ngIf="selectedVariant === 'Basic'" class="e-input" [class.error]="isErrorVariant">
+            <div class="e-input__wrapper">
+              <input type="text" class="e-input__field" placeholder="DNI o NIE" required />
+            </div>
+            <span class="e-input__text">Mensaje de ayuda o error</span>
+          </div>
+
+          <div *ngIf="selectedVariant === 'Magic'" class="e-input" [class.error]="isErrorVariant">
+            <div class="e-input__wrapper e-input__wrapper--magic">
+              <input type="text" class="e-input__field" placeholder=" " required />
+              <label class="e-input__label">Nombre</label>
+            </div>
+            <span class="e-input__text">Mensaje de ayuda o error</span>
+          </div>
+
+          <div *ngIf="selectedVariant === 'SelectMagic'" class="e-select" [class.error]="isErrorVariant">
+            <div class="e-select__wrapper e-select__wrapper--magic">
+              <select class="e-select__field">
+                <option value="" selected>Mes</option>
+                <option value="enero">Enero</option>
+                <option value="febrero">Febrero</option>
+                <option value="marzo">Marzo</option>
+              </select>
+              <label class="e-select__label">Mes</label>
+            </div>
+            <span class="e-select__text">Mensaje de ayuda o error</span>
+          </div>
+
+          <div *ngIf="selectedVariant === 'Radio'" class="e-radio">
+            <label class="e-radio__wrapper">
+              <input type="radio" name="covertype" class="e-radio__input" value="luz" checked />
+              <span class="e-radio__label">Luz</span>
+            </label>
+            <label class="e-radio__wrapper">
+              <input type="radio" name="covertype" class="e-radio__input" value="gas" />
+              <span class="e-radio__label">Gas</span>
+            </label>
+            <label class="e-radio__wrapper">
+              <input type="radio" name="covertype" class="e-radio__input" value="luz-gas" />
+              <span class="e-radio__label">Luz y gas</span>
+            </label>
+          </div>
+                      <div  *ngIf="selectedVariant === 'Checkbox'" class="e-checkbox u-width-100 u-mt-8" [class.error]="isErrorVariant">
+              <label class="e-checkbox__label">
+                <input type="checkbox" name="checkmark">
+                <div class="e-checkbox__checkmark-container">
+                  <span class="e-checkbox__checkmark"></span>
+                  <span class="e-checkbox__text">He leído y acepto el
+                    <a href="https://www.rastreator.com/aviso-legal.aspx" target="blank" class="e-checkbox__legal">Aviso
+                      legal</a> y la <a href="https://www.rastreator.com/politica-de-privacidad.aspx" target="blank"
+                      class="e-checkbox__legal">Política de
+                      privacidad</a></span>
+                </div>
+              </label>
+              <p class="e-checkbox__error">Para continuar, acepta el Aviso
+                legal y la Política de privacidad</p>
+            </div>
+        </div>
+      </article>
+
+      <article class="inputs-docs__panel">
+        <h2>Estructura Html</h2>
+        <div class="inputs-docs__snippetHeader">
+          <span class="inputs-docs__snippetLabel">Código para {{ selectedVariant }}</span>
+          <button type="button" class="inputs-docs__copyButton" (click)="copySnippet()">{{ copyFeedback }}</button>
+        </div>
+        <pre class="inputs-docs__codeBlock"><code>{{ selectedSnippet }}</code></pre>
+      </article>
+
+      <article class="inputs-docs__panel inputs-docs__panel--full">
+        <details class="e-summary">
+          <summary class="e-summary__trigger">
+            <h2 class="e-summary__title u-mb-0">Guía de uso</h2>
+            <img class="e-summary__icon" src="assets/img/icon-system-chevdrondown.svg" alt="Expandir">
+          </summary>
+          <div class="e-summary__content u-mt-16">
+            <div class="u-ds-flex u-dir-col u-dir-xl-row" style="gap:32px">
+              <div class="u-ds-flex u-dir-col">
+                <p class="u-fw-600">✔️ Forma correcta</p>
+                <ul class="inputs-docs__list">
+                  <li>Mantener la jerarquía BEM: <code>.e-input</code>, <code>.e-input__wrapper</code>, <code>.e-input__field</code>, <code>.e-input__text</code>.</li>
+                  <li>En variante magic, usar <code>placeholder=" "</code> y colocar el <code>label</code> después del <code>input</code>.</li>
+                  <li>En selects magic, mantener la primera <code>option</code> con <code>value=""</code> y <code>selected</code> como placeholder.</li>
+                  <li>En radios, el <code>label</code> envuelve al <code>input</code> y comparten <code>name</code>.</li>
+                </ul>
+              </div>
+              <div class="u-ds-flex u-dir-col">
+                <p class="u-fw-600">❌ Usos prohibidos</p>
+                <ul class="inputs-docs__list">
+                  <li>No cambiar los nombres de clases.</li>
+                  <li>No eliminar los wrappers ni colocar el label antes del input en magic.</li>
+                  <li>No quitar la primera option del select magic.</li>
+                  <li>No reemplazar el <code>label</code> wrapper de los radios por <code>div</code>.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </details>
+      </article>
+    </div>
+  </div>
+</section>

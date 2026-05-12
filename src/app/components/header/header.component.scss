@@ -1,0 +1,246 @@
+@use '../../../assets/scss/variables' as *;
+
+.header {
+  background-color: #009fc7;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px 16px;
+  min-height: 52px;
+  max-height: 78px;
+
+  @media (min-width: $screen-md) {
+    justify-content: center;
+    padding: 16px 20px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+
+    @media screen and (min-width: $screen-xxl) {
+      max-width: 1705px;
+    }
+  }
+
+  &__items {
+    flex-grow: 1;
+    text-align: center;
+          display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+
+    @media (min-width: $screen-md) {
+      margin-right: 0;
+      text-align: end;
+
+    }
+  }
+
+  &__maintxt {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+
+    @media (min-width: $screen-md) {
+      flex-grow: 0;
+      font-size: 20px;
+    }
+  }
+
+  &__flag{
+    width: 30px;
+    height: auto;
+    opacity: 0.45;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.75;
+    }
+
+    &--active {
+      opacity: 1;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+  }
+}
+
+.supportBtn:hover,
+.supportBtn:active,
+.supportBtn:visited,
+.supportBtn:focus {
+  @media (min-width: $screen-md) {
+    text-decoration: none;
+  }
+}
+
+.supportBtn {
+  display: flex;
+  border-radius: 6px;
+  border: 1px solid var(--Primary-Blue-2-Default, #015368);
+  background-color: #fff;
+  width: fit-content;
+  margin-bottom: 0;
+  align-items: center;
+  text-decoration: none;
+
+  .header & {
+    background-color: transparent;
+    border: none;
+    gap: 8px;
+    justify-content: flex-end;
+
+    @media (max-width: $screen-md) {
+      border-radius: 40px;
+      border: 1px solid $color-white;
+      padding: 4px 16px;
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+    cursor: default;
+  }
+
+  @media (max-width: $screen-md) {
+    &:focus {
+      background-color: #0153681a;
+    }
+
+    border-radius: 40px;
+  }
+
+  &__text {
+    color: var(--Primary-Blue-2-Default, #015368);
+    text-align: center;
+    font-feature-settings:
+      'liga' off,
+      'clig' off;
+    font-size: 7px;
+    font-weight: 600;
+    line-height: 18px; /* 150% */
+    text-transform: uppercase;
+    align-content: center;
+    margin: 0;
+    text-decoration: none;
+
+    @media (min-width: 323px) {
+      font-size: 8px;
+    }
+
+    @media (max-width: 350px) {
+      display: none;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 12px;
+    }
+
+    .header & {
+      color: $color-white;
+
+      @media screen and (max-width: $screen-md) {
+        display: none;
+      }
+    }
+  }
+
+  &__mainSection {
+    display: flex;
+
+    .header & {
+      gap: 8px;
+    }
+  }
+
+  &__phone {
+    width: 18px;
+    color: $color-blue-02;
+    align-self: center;
+    text-decoration: none;
+
+    .header & {
+      color: $color-white;
+    }
+  }
+
+  &__divider {
+    @media (max-width: 350px) {
+      display: none;
+    }
+
+    height: 22px;
+    width: 1px;
+    background-color: $color-blue-02;
+    margin: 2px 4px;
+
+    @media (min-width: $screen-md) {
+      margin: 10px 0px;
+      height: 30px;
+    }
+
+    .header & {
+      background-color: $color-white;
+
+      @media screen and (max-width: $screen-md) {
+        display: none;
+      }
+    }
+  }
+
+  &__number {
+    color: $color-primary-blue;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+    text-decoration: none;
+
+    @media (max-width: $screen-md) {
+      line-height: 14px;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 16px;
+    }
+
+    .header & {
+      color: $color-white;
+      text-align: center;
+    }
+
+    &sContainer {
+      align-content: center;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+
+  &__schedule {
+    color: var(--Primary-Blue-2-Default, #015368);
+    text-align: center;
+    font-size: 8px;
+    font-weight: 400;
+    margin: 0;
+    text-decoration: none;
+
+    @media (max-width: $screen-md) {
+      line-height: 8px;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 10px;
+    }
+
+    .header & {
+      color: $color-white;
+      text-align: center;
+    }
+  }
+}

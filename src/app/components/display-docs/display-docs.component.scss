@@ -1,0 +1,151 @@
+@use "../../../assets/scss/all-generics.scss" as *;
+
+.display-docs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &__hero,
+  &__panel {
+    background-color: #ffffff;
+    border: 1px solid #dce8f5;
+    border-radius: 18px;
+    padding: 24px;
+  }
+
+  &__eyebrow {
+    color: #009fc7;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    color: #16314f;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  &__description,
+  &__panel p {
+    color: #4a6481;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  h2 {
+    color: #143152;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  &__list {
+    color: #4a6481;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 8px;
+  }
+
+  &__demo-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  &__demo-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    min-width: 180px;
+
+    &--wide {
+      min-width: 240px;
+    }
+  }
+
+  &__demo-label {
+    background-color: $color-blue-02;
+    border-radius: 6px 6px 0 0;
+    color: $color-white;
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 10px;
+  }
+
+  &__demo-container {
+    background-color: $color-blue-07;
+    border: 1px solid $color-grey-04;
+    border-radius: 0 0 6px 6px;
+    min-height: 52px;
+    padding: 8px;
+  }
+
+  &__demo-box {
+    align-items: center;
+    background-color: $color-primary-blue;
+    border-radius: 4px;
+    color: $color-white;
+    display: flex;
+    font-size: 12px;
+    font-weight: 700;
+    height: 36px;
+    justify-content: center;
+    min-width: 36px;
+    padding: 0 10px;
+
+    &--tall {
+      height: 64px;
+    }
+  }
+
+  &__table {
+    border-collapse: collapse;
+    font-size: 14px;
+    width: 100%;
+
+    th {
+      background: #f4f8fc;
+      border: 1px solid #dce8f5;
+      color: #143152;
+      font-weight: 700;
+      padding: 10px 14px;
+      text-align: left;
+    }
+
+    td {
+      border: 1px solid #dce8f5;
+      color: #4a6481;
+      padding: 8px 14px;
+
+      em {
+        color: #7a9ab8;
+        font-style: italic;
+      }
+    }
+
+    tr:nth-child(even) td {
+      background: #f9fbfd;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .display-docs {
+    &__title {
+      font-size: 24px;
+    }
+  }
+}

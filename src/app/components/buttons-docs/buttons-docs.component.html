@@ -1,0 +1,250 @@
+<section class="buttons-docs" aria-label="Buttons documentation">
+    <div class="buttons-docs__hero">
+        <p class="buttons-docs__eyebrow">Elements / Buttons</p> <span class="icon icon-company"></span>
+        <h1 class="buttons-docs__title">Buttons</h1>
+        <p class="buttons-docs__description">
+            Esta guía explica cómo construir correctamente la estructura HTML de los elementos de tipo Button siguiendo
+            la arquitectura ITCSS definida.
+        </p>
+    </div>
+
+    <div class="buttons-docs__content">
+        <article class="buttons-docs__panel buttons-docs__panel--playground">
+            <h2>Playground</h2>
+            <div class="u-ds-flex u-align-center">
+                <div class="e-select u-width-50">
+                    <div class="e-select__wrapper">
+                        <label class="e-select__label u-mt-16" for="button-variant">Selecciona un tipo de boton</label>
+                        <select id="button-variant" class="e-select__field u-mb-16" [value]="selectedVariant"
+                            (change)="onVariantChange($any($event.target).value)">
+                            <option value="Primary">Primary</option>
+                            <option value="Secondary">Secondary</option>
+                            <option value="Tertiary">Tertiary</option>
+                            <option value="Link">Link</option>
+                        </select>
+                    </div>
+                </div>
+                <label class="checkbox u-ms-24 u-mt-16">
+                    <input type="checkbox" name="checkmark" [checked]="isSquareVariant"
+                        (change)="onSquareVariantChange($any($event.target).checked)">
+                    <div class="checkbox__container">
+                        <span class="checkmark"></span>
+                        <span class="checkbox__txt">Variante cuadrada</span>
+                    </div>
+                </label>
+                <label class="checkbox u-ms-24 u-mt-16">
+                    <input type="checkbox" name="checkmark" [checked]="isDisabledVariant"
+                        (change)="onDisabledVariantChange($any($event.target).checked)">
+                    <div class="checkbox__container">
+                        <span class="checkmark"></span>
+                        <span class="checkbox__txt">Variante disabled</span>
+                    </div>
+                </label>
+            </div>
+            <div>
+                <details class="e-summary e-summary--secondary u-mb-16">
+                    <summary class="e-summary__trigger">
+                        <p class="e-summary__title">Más opciones de personalización</p>
+                        <img class="e-summary__icon" src="assets/img/icon-system-chevdrondown.svg" alt="Expandir">
+                    </summary>
+                    <div class="e-summary__content">
+                        <div class="u-ds-flex u-align-center">
+                            <div class="e-select">
+                                <div class="e-select__wrapper">
+                                    <label class="e-select__label u-mt-16" for="button-width">Ancho del boton</label>
+                                    <select id="button-width" class="e-select__field u-mb-16 "
+                                        [value]="selectedWidth === null ? '' : selectedWidth"
+                                        (change)="onWidthChange($any($event.target).value)">
+                                        <option value="">Por defecto</option>
+                                        <option *ngFor="let width of widthOptions" [value]="width">{{ width }}%</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="e-select  u-ms-16">
+                                <div class="e-select__wrapper">
+                                    <label class="e-select__label u-mt-16" for="button-height">Alto del boton</label>
+                                    <select id="button-height" class="e-select__field u-mb-16 "
+                                        [value]="selectedHeight === null ? '' : selectedHeight"
+                                        (change)="onHeightChange($any($event.target).value)">
+                                        <option value="">Por defecto</option>
+                                        <option *ngFor="let height of heightOptions" [value]="height">{{ height }}px
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="e-select  u-ms-16">
+                                <div class="e-select__wrapper">
+                                    <label class="e-select__label u-mt-16" for="button-fontsize">Tamaño fuente</label>
+                                    <select id="button-fontsize" class="e-select__field u-mb-16 "
+                                        [value]="selectedFontSize === null ? '' : selectedFontSize"
+                                        (change)="onFontSizeChange($any($event.target).value)">
+                                        <option value="">Por defecto</option>
+                                        <option *ngFor="let fs of fontSizeOptions" [value]="fs">{{ fs }}px</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="checkbox" name="checkmark" [checked]="isResponsiveVariant"
+                                    (change)="onResponsiveVariantChange($any($event.target).checked)">
+                                <div class="checkbox__container">
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox__txt">Personalización extra para responsive</span>
+                                </div>
+                            </label>
+                            <div *ngIf="isResponsiveVariant">
+                                <div *ngFor="let entry of breakpointEntries; let i = index"
+                                    class="u-ds-flex u-dir-col u-mt-8">
+                                    <div class="u-ds-flex u-justify-between u-width-100">
+                                    <div class="e-select">
+                                        <div class="e-select__wrapper">
+                                            <label class="e-select__label u-mt-16"
+                                                [for]="'button-breakpoint-' + i">Breakpoint</label>
+                                            <select [id]="'button-breakpoint-' + i"
+                                                class="e-select__field u-mb-16"
+                                                [value]="entry.breakpoint"
+                                                (change)="onEntryBreakpointChange(i, $any($event.target).value)">
+                                                <option value="">Selecciona</option>
+                                                <option *ngFor="let bp of breakpointOptions" [value]="bp">{{ bp }}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="e-select u-ms-16">
+                                        <div class="e-select__wrapper">
+                                            <label class="e-select__label u-mt-16"
+                                                [for]="'button-width-' + i">Ancho (desktop)</label>
+                                            <select [id]="'button-width-' + i" class="e-select__field u-mb-16"
+                                                [value]="entry.width === null ? '' : entry.width"
+                                                (change)="onEntryWidthChange(i, $any($event.target).value)">
+                                                <option value="">Por defecto</option>
+                                                <option *ngFor="let width of widthOptions" [value]="width">{{ width }}%
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="e-select u-ms-16">
+                                        <div class="e-select__wrapper">
+                                            <label class="e-select__label u-mt-16"
+                                                [for]="'button-height-' + i">Alto (desktop)</label>
+                                            <select [id]="'button-height-' + i" class="e-select__field u-mb-16"
+                                                [value]="entry.height === null ? '' : entry.height"
+                                                (change)="onEntryHeightChange(i, $any($event.target).value)">
+                                                <option value="">Por defecto</option>
+                                                <option *ngFor="let height of heightOptions" [value]="height">{{ height }}px
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="e-select u-ms-16">
+                                        <div class="e-select__wrapper">
+                                            <label class="e-select__label u-mt-16"
+                                                [for]="'button-fontsize-' + i">Fuente (desktop)</label>
+                                            <select [id]="'button-fontsize-' + i" class="e-select__field u-mb-16"
+                                                [value]="entry.fontSize === null ? '' : entry.fontSize"
+                                                (change)="onEntryFontSizeChange(i, $any($event.target).value)">
+                                                <option value="">Por defecto</option>
+                                                <option *ngFor="let fs of fontSizeOptions" [value]="fs">{{ fs }}px</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <button *ngIf="breakpointEntries.length >= 1" type="button"
+                                        class="buttons-docs__removeBreakpoint u-alignself-start"
+                                        (click)="removeBreakpoint(i)">Eliminar breakpoint</button>
+                                </div>
+                                <label class="checkbox u-mt-16">
+                                    <input type="checkbox" name="add-breakpoint" #addBpCheckbox
+                                        (change)="addBreakpoint(); addBpCheckbox.checked = false">
+                                    <div class="checkbox__container">
+                                        <span class="checkmark"></span>
+                                        <span class="checkbox__txt">Añadir otro breakpoint</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </article>
+        <div style="display: flex; flex-direction: column; gap: 16px">
+            <article class="buttons-docs__panel">
+                <h2>Previsualización del elemento</h2>
+                <div class="buttons-docs__playground u-dir-col">
+                    <div>
+                        <button *ngIf="selectedVariant === 'Primary'" type="button"
+                            [class]="buttonClass('e-btn--primary')" [disabled]="isDisabledVariant">Primary</button>
+                        <button *ngIf="selectedVariant === 'Secondary'" type="button"
+                            [class]="buttonClass('e-btn--secondary')" [disabled]="isDisabledVariant">Secondary</button>
+                        <button *ngIf="selectedVariant === 'Tertiary'" type="button"
+                            [class]="buttonClass('e-btn--terciary')" [disabled]="isDisabledVariant">Tertiary</button>
+                        <button *ngIf="selectedVariant === 'Link'" type="button" [class]="buttonClass('e-btn--link')"
+                            [disabled]="isDisabledVariant">Link</button>
+                    </div>
+
+                    <p *ngIf="selectedVariant === 'Primary'" class="u-fw-600">- Botón principal (acción destacada)</p>
+                    <p *ngIf="selectedVariant === 'Secondary'" class="u-fw-600">- Acciones secundarias</p>
+
+                    <div *ngIf="selectedVariant === 'Tertiary'">
+                        <p class="u-fw-600">- Botón con borde</p>
+                        <p class="u-fw-600">- Menor peso visual</p>
+                    </div>
+                    <div *ngIf="selectedVariant === 'Link'">
+                        <p class="u-fw-600">- Apariencia de enlace</p>
+                        <p class="u-fw-600">- Para acciones poco prioritarias</p>
+                    </div>
+
+
+
+                </div>
+            </article>
+            <article class="buttons-docs__panel">
+                <h2>Estructura Html</h2>
+                <div class="buttons-docs__snippetHeader">
+                    <span class="buttons-docs__snippetLabel">Código para button {{ selectedVariant }}</span>
+                    <button type="button" class="buttons-docs__copyButton" (click)="copySnippet()">{{ copyFeedback
+                        }}</button>
+                </div>
+                <pre class="buttons-docs__codeBlock"><code>{{ selectedSnippet }}</code></pre>
+            </article>
+
+        <article class="buttons-docs__panel buttons-docs__panel--full">
+            <details class="e-summary">
+                <summary class="e-summary__trigger">
+                    <h2 class="e-summary__title u-mb-0">Guía de uso</h2>
+                    <img class="e-summary__icon" src="assets/img/icon-system-chevdrondown.svg" alt="Expandir">
+                </summary>
+                <div class="e-summary__content u-mt-16">
+                    <div class="u-ds-flex u-dir-col u-dir-xl-row" style="gap:32px">
+                        <div class="u-ds-flex u-dir-col">
+                            <p class="u-fw-600">✔️ Forma correcta</p>
+                            <ul class="buttons-docs__list">
+                                <li>Usar siempre e-btn + variante</li>
+                                <li>Usar "&lt;button&gt;" para acciones y "&lt;a&gt;" para navegación</li>
+                                <li>Mantener textos claros y accionables</li>
+                            </ul>
+                        </div>
+                        <div class="u-ds-flex u-dir-col">
+                            <p class="u-fw-600">❌ Usos prohibidos</p>
+                            <ul class="buttons-docs__list">
+                                <li>No usar solo e-btn sin variante</li>
+                                <li>No mezclar varias variantes</li>
+                                <li>No usar .disabled sin controlar la lógica en JS</li>
+                            </ul>
+                        </div>
+                        <div class="u-ds-flex u-dir-col">
+                            <p class="u-fw-600">⚠️ Importante:</p>
+                            <ul class="buttons-docs__list">
+                                <li>Se usa clase .disabled (no el atributo disabled)</li>
+                                <li>Cambia estilos visuales</li>
+                                <li>No bloquea comportamiento JS automáticamente, AÑADIR el atributo para bloquearlo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </article>
+        </div>
+
+    </div>
+</section> 

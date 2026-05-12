@@ -1,0 +1,440 @@
+<section class="display-docs" aria-label="display documentation">
+  <div class="display-docs__hero">
+    <p class="display-docs__eyebrow">{{ t.eyebrow }}</p>
+    <h1 class="display-docs__title">Display</h1>
+    <p class="display-docs__description" [innerHTML]="safe(t.description)"></p>
+  </div>
+
+  <div class="display-docs__content">
+
+    <!-- Display -->
+    <article class="display-docs__panel">
+      <details class="e-summary" open> 
+        <summary class="e-summary__trigger">
+          <h2 class="e-summary__title u-mb-0">{{ t.summaryTitle }}</h2>
+          <img class="e-summary__icon" src="assets/img/icon-system-chevdrondown.svg" alt="Expandir">
+        </summary>
+        <div class="e-summary__content u-mt-16">
+
+          <p class="u-mb-16" [innerHTML]="safe(t.intro)"></p>
+
+          <h3 class="u-mb-16 u-fw-600">{{ t.breakpointsTitle }}</h3>
+          <table class="display-docs__table">
+            <thead>
+              <tr>
+                <th>{{ t.thSuffix }}</th>
+                <th>Breakpoint</th>
+                <th>{{ t.thDescription }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>sm</code></td><td><code>min-width: 768px</code></td><td>{{ t.bpSm }}</td></tr>
+              <tr><td><code>md</code></td><td><code>min-width: 992px</code></td><td>{{ t.bpMd }}</td></tr>
+              <tr><td><code>lg</code></td><td><code>min-width: 1224px</code></td><td>{{ t.bpLg }}</td></tr>
+              <tr><td><code>xl</code></td><td><code>min-width: 1440px</code></td><td>{{ t.bpXl }}</td></tr>
+              <tr><td><code>xxl</code></td><td><code>min-width: 1919px</code></td><td>{{ t.bpXxl }}</td></tr>
+            </tbody>
+          </table>
+
+          <!-- Display values -->
+          <h3 class="u-mb-16 u-mt-24 u-fw-600">{{ t.displayValuesTitle }}</h3>
+          <table class="display-docs__table">
+            <thead>
+              <tr>
+                <th>{{ t.thClass }}</th>
+                <th>{{ t.thCSS }}</th>
+                <th>{{ t.thUsage }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>.u-ds-block</code></td>
+                <td><code>display: block !important</code></td>
+                <td>{{ t.dsBlock }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-ds-inline</code></td>
+                <td><code>display: inline !important</code></td>
+                <td>{{ t.dsInline }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-ds-inline-block</code></td>
+                <td><code>display: inline-block !important</code></td>
+                <td>{{ t.dsInlineBlock }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-ds-flex</code></td>
+                <td><code>display: flex !important</code></td>
+                <td>{{ t.dsFlex }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-ds-inline-flex</code></td>
+                <td><code>display: inline-flex !important</code></td>
+                <td>{{ t.dsInlineFlex }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-ds-grid</code></td>
+                <td><code>display: grid !important</code></td>
+                <td>{{ t.dsGrid }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-ds-none</code></td>
+                <td><code>display: none !important</code></td>
+                <td>{{ t.dsNone }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-ds-sm-grid</code></td>
+                <td><code>@media (min-width: 768px) &#123; display: grid !important &#125;</code></td>
+                <td>{{ t.dsSmGrid }}</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Justify content -->
+          <h3 class="u-mb-16 u-mt-24 u-fw-600">{{ t.justifyTitle }}</h3>
+          <table class="display-docs__table">
+            <thead>
+              <tr>
+                <th>{{ t.thClass }}</th>
+                <th>{{ t.thCSS }}</th>
+                <th>{{ t.thUsage }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>.u-justify-start</code></td>
+                <td><code>justify-content: flex-start !important</code></td>
+                <td>{{ t.justifyStart }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-justify-center</code></td>
+                <td><code>justify-content: center !important</code></td>
+                <td>{{ t.justifyCenter }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-justify-end</code></td>
+                <td><code>justify-content: flex-end !important</code></td>
+                <td>{{ t.justifyEnd }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-justify-between</code></td>
+                <td><code>justify-content: space-between !important</code></td>
+                <td>{{ t.justifyBetween }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-justify-around</code></td>
+                <td><code>justify-content: space-around !important</code></td>
+                <td>{{ t.justifyAround }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-justify-lg-between</code></td>
+                <td><code>@media (min-width: 1224px) &#123; justify-content: space-between !important &#125;</code></td>
+                <td>{{ t.justifyLgBetween }}</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Demo justify-content -->
+          <div class="display-docs__demo-group u-mt-16">
+            <div class="display-docs__demo-item">
+              <span class="display-docs__demo-label">.u-justify-start</span>
+              <div class="display-docs__demo-container u-ds-flex u-justify-start">
+                <div class="display-docs__demo-box">A</div>
+                <div class="display-docs__demo-box">B</div>
+                <div class="display-docs__demo-box">C</div>
+              </div>
+            </div>
+            <div class="display-docs__demo-item">
+              <span class="display-docs__demo-label">.u-justify-center</span>
+              <div class="display-docs__demo-container u-ds-flex u-justify-center">
+                <div class="display-docs__demo-box">A</div>
+                <div class="display-docs__demo-box">B</div>
+                <div class="display-docs__demo-box">C</div>
+              </div>
+            </div>
+            <div class="display-docs__demo-item">
+              <span class="display-docs__demo-label">.u-justify-end</span>
+              <div class="display-docs__demo-container u-ds-flex u-justify-end">
+                <div class="display-docs__demo-box">A</div>
+                <div class="display-docs__demo-box">B</div>
+                <div class="display-docs__demo-box">C</div>
+              </div>
+            </div>
+            <div class="display-docs__demo-item">
+              <span class="display-docs__demo-label">.u-justify-between</span>
+              <div class="display-docs__demo-container u-ds-flex u-justify-between">
+                <div class="display-docs__demo-box">A</div>
+                <div class="display-docs__demo-box">B</div>
+                <div class="display-docs__demo-box">C</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Align items -->
+          <h3 class="u-mb-16 u-mt-24 u-fw-600">{{ t.alignTitle }}</h3>
+          <table class="display-docs__table">
+            <thead>
+              <tr>
+                <th>{{ t.thClass }}</th>
+                <th>{{ t.thCSS }}</th>
+                <th>{{ t.thUsage }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>.u-align-start</code></td>
+                <td><code>align-items: flex-start !important</code></td>
+                <td>{{ t.alignStart }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-align-center</code></td>
+                <td><code>align-items: center !important</code></td>
+                <td>{{ t.alignCenter }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-align-end</code></td>
+                <td><code>align-items: flex-end !important</code></td>
+                <td>{{ t.alignEnd }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-align-stretch</code></td>
+                <td><code>align-items: stretch !important</code></td>
+                <td>{{ t.alignStretch }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-alignself-end</code></td>
+                <td><code>align-self: flex-end !important</code></td>
+                <td>{{ t.alignSelfEnd }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-alignself-center</code></td>
+                <td><code>align-self: center !important</code></td>
+                <td>{{ t.alignSelfCenter }}</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Demo align-items -->
+          <div class="display-docs__demo-group u-mt-16">
+            <div class="display-docs__demo-item">
+              <span class="display-docs__demo-label">.u-align-start</span>
+              <div class="display-docs__demo-container u-ds-flex u-align-start" style="height:90px">
+                <div class="display-docs__demo-box">A</div>
+                <div class="display-docs__demo-box display-docs__demo-box--tall">B</div>
+                <div class="display-docs__demo-box">C</div>
+              </div>
+            </div>
+            <div class="display-docs__demo-item">
+              <span class="display-docs__demo-label">.u-align-center</span>
+              <div class="display-docs__demo-container u-ds-flex u-align-center" style="height:90px">
+                <div class="display-docs__demo-box">A</div>
+                <div class="display-docs__demo-box display-docs__demo-box--tall">B</div>
+                <div class="display-docs__demo-box">C</div>
+              </div>
+            </div>
+            <div class="display-docs__demo-item">
+              <span class="display-docs__demo-label">.u-align-end</span>
+              <div class="display-docs__demo-container u-ds-flex u-align-end" style="height:90px">
+                <div class="display-docs__demo-box">A</div>
+                <div class="display-docs__demo-box display-docs__demo-box--tall">B</div>
+                <div class="display-docs__demo-box">C</div>
+              </div>
+            </div>
+            <div class="display-docs__demo-item">
+              <span class="display-docs__demo-label">.u-align-stretch</span>
+              <div class="display-docs__demo-container u-ds-flex u-align-stretch" style="height:90px">
+                <div class="display-docs__demo-box">A</div>
+                <div class="display-docs__demo-box">B</div>
+                <div class="display-docs__demo-box">C</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Place content -->
+          <h3 class="u-mb-16 u-mt-24 u-fw-600">{{ t.placeTitle }}</h3>
+          <table class="display-docs__table">
+            <thead>
+              <tr>
+                <th>{{ t.thClass }}</th>
+                <th>{{ t.thCSS }}</th>
+                <th>{{ t.thUsage }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>.u-place-center</code></td>
+                <td><code>place-content: center !important</code></td>
+                <td>{{ t.placeCenter }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-place-start-end</code></td>
+                <td><code>place-content: flex-start flex-end !important</code></td>
+                <td>{{ t.placeStartEnd }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-place-between-center</code></td>
+                <td><code>place-content: space-between center !important</code></td>
+                <td>{{ t.placeBetweenCenter }}</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Flex direction -->
+          <h3 class="u-mb-16 u-mt-24 u-fw-600">{{ t.directionTitle }}</h3>
+          <table class="display-docs__table">
+            <thead>
+              <tr>
+                <th>{{ t.thClass }}</th>
+                <th>{{ t.thCSS }}</th>
+                <th>{{ t.thUsage }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>.u-dir-row</code></td>
+                <td><code>flex-direction: row !important</code></td>
+                <td>{{ t.dirRow }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-dir-col</code></td>
+                <td><code>flex-direction: column !important</code></td>
+                <td>{{ t.dirCol }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-dir-rowrev</code></td>
+                <td><code>flex-direction: row-reverse !important</code></td>
+                <td>{{ t.dirRowrev }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-dir-colrev</code></td>
+                <td><code>flex-direction: column-reverse !important</code></td>
+                <td>{{ t.dirColrev }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-dir-md-rowrev</code></td>
+                <td><code>@media (min-width: 992px) &#123; flex-direction: row-reverse !important &#125;</code></td>
+                <td>{{ t.dirMdRowrev }}</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Demo flex-direction -->
+          <div class="display-docs__demo-group u-mt-16">
+            <div class="display-docs__demo-item">
+              <span class="display-docs__demo-label">.u-dir-row</span>
+              <div class="display-docs__demo-container u-ds-flex u-dir-row" style="gap:8px">
+                <div class="display-docs__demo-box">1</div>
+                <div class="display-docs__demo-box">2</div>
+                <div class="display-docs__demo-box">3</div>
+              </div>
+            </div>
+            <div class="display-docs__demo-item">
+              <span class="display-docs__demo-label">.u-dir-col</span>
+              <div class="display-docs__demo-container u-ds-flex u-dir-col" style="gap:8px">
+                <div class="display-docs__demo-box">1</div>
+                <div class="display-docs__demo-box">2</div>
+                <div class="display-docs__demo-box">3</div>
+              </div>
+            </div>
+            <div class="display-docs__demo-item">
+              <span class="display-docs__demo-label">.u-dir-rowrev</span>
+              <div class="display-docs__demo-container u-ds-flex u-dir-rowrev" style="gap:8px">
+                <div class="display-docs__demo-box">1</div>
+                <div class="display-docs__demo-box">2</div>
+                <div class="display-docs__demo-box">3</div>
+              </div>
+            </div>
+            <div class="display-docs__demo-item">
+              <span class="display-docs__demo-label">.u-dir-colrev</span>
+              <div class="display-docs__demo-container u-ds-flex u-dir-colrev" style="gap:8px">
+                <div class="display-docs__demo-box">1</div>
+                <div class="display-docs__demo-box">2</div>
+                <div class="display-docs__demo-box">3</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flex wrap -->
+          <h3 class="u-mb-16 u-mt-24 u-fw-600">{{ t.wrapTitle }}</h3>
+          <table class="display-docs__table">
+            <thead>
+              <tr>
+                <th>{{ t.thClass }}</th>
+                <th>{{ t.thCSS }}</th>
+                <th>{{ t.thUsage }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>.u-wrap-wrap</code></td>
+                <td><code>flex-wrap: wrap !important</code></td>
+                <td>{{ t.wrapWrap }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-wrap-nowrap</code></td>
+                <td><code>flex-wrap: nowrap !important</code></td>
+                <td>{{ t.wrapNowrap }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-wrap-reverse</code></td>
+                <td><code>flex-wrap: wrap-reverse !important</code></td>
+                <td>{{ t.wrapReverse }}</td>
+              </tr>
+              <tr>
+                <td><code>.u-wrap-xl-wrap</code></td>
+                <td><code>@media (min-width: 1919px) &#123; flex-wrap: wrap !important &#125;</code></td>
+                <td>{{ t.wrapXlWrap }}</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Demo flex-wrap -->
+          <div class="display-docs__demo-group u-mt-16">
+            <div class="display-docs__demo-item display-docs__demo-item--wide">
+              <span class="display-docs__demo-label">{{ t.demoWrapWrap }}</span>
+              <div class="display-docs__demo-container u-ds-flex u-wrap-wrap" style="gap:8px; max-width:220px">
+                <div class="display-docs__demo-box">Item 1</div>
+                <div class="display-docs__demo-box">Item 2</div>
+                <div class="display-docs__demo-box">Item 3</div>
+                <div class="display-docs__demo-box">Item 4</div>
+                <div class="display-docs__demo-box">Item 5</div>
+              </div>
+            </div>
+            <div class="display-docs__demo-item display-docs__demo-item--wide">
+              <span class="display-docs__demo-label">{{ t.demoWrapNowrap }}</span>
+              <div class="display-docs__demo-container u-ds-flex u-wrap-nowrap" style="gap:8px; max-width:240px; overflow:hidden">
+                <div class="display-docs__demo-box">Item 1</div>
+                <div class="display-docs__demo-box">Item 2</div>
+                <div class="display-docs__demo-box">Item 3</div>
+                <div class="display-docs__demo-box">Item 4</div>
+                <div class="display-docs__demo-box">Item 5</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="u-ds-flex u-dir-col u-dir-xl-row u-mt-16" style="gap:32px">
+            <div class="u-ds-flex u-dir-col">
+              <p class="u-fw-600">{{ t.doTitle }}</p>
+              <ul class="display-docs__list">
+                <li [innerHTML]="safe(t.do1)"></li>
+                <li [innerHTML]="safe(t.do2)"></li>
+                <li [innerHTML]="safe(t.do3)"></li>
+                <li [innerHTML]="safe(t.do4)"></li>
+              </ul>
+            </div>
+            <div class="u-ds-flex u-dir-col">
+              <p class="u-fw-600">{{ t.dontTitle }}</p>
+              <ul class="display-docs__list">
+                <li [innerHTML]="safe(t.dont1)"></li>
+                <li [innerHTML]="safe(t.dont2)"></li>
+                <li [innerHTML]="safe(t.dont3)"></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </details>
+    </article>
+
+  </div>
+</section>

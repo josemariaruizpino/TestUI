@@ -3,8 +3,7 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'app-modal-docs',
     templateUrl: './modal-docs.component.html',
-    styleUrls: ['./modal-docs.component.scss'],
-    standalone: false
+    styleUrls: ['./modal-docs.component.scss']
 })
 export class ModalDocsComponent {
   public copyFeedback = 'Copiar';

@@ -3,8 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector: 'app-colors-docs',
     templateUrl: './colors-docs.component.html',
-    styleUrls: ['./colors-docs.component.scss'],
-    standalone: false
+    styleUrls: ['./colors-docs.component.scss']
 })
 export class ColorsDocsComponent implements OnInit {
 

@@ -5,8 +5,7 @@ type SummaryVariant = 'Default' | 'Secondary';
 @Component({
     selector: 'app-summary-docs',
     templateUrl: './summary-docs.component.html',
-    styleUrls: ['./summary-docs.component.scss'],
-    standalone: false
+    styleUrls: ['./summary-docs.component.scss']
 })
 export class SummaryDocsComponent {
   public selectedVariant: SummaryVariant = 'Default';

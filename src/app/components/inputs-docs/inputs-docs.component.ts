@@ -5,8 +5,7 @@ type InputVariant = 'Basic' | 'Magic' | 'SelectMagic' | 'Radio' | 'Checkbox';
 @Component({
     selector: 'app-inputs-docs',
     templateUrl: './inputs-docs.component.html',
-    styleUrls: ['./inputs-docs.component.scss'],
-    standalone: false
+    styleUrls: ['./inputs-docs.component.scss']
 })
 export class InputsDocsComponent {
   public selectedVariant: InputVariant = 'Basic';

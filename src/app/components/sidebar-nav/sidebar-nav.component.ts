@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterLinkActive, RouterLink } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
@@ -18,7 +18,7 @@ interface NavSection {
     selector: 'app-sidebar-nav',
     templateUrl: './sidebar-nav.component.html',
     styleUrls: ['./sidebar-nav.component.scss'],
-    standalone: false
+    imports: [RouterLinkActive, RouterLink]
 })
 export class SidebarNavComponent implements OnInit, OnDestroy {
   public isSidebarCollapsed = false;

@@ -4,8 +4,7 @@ import { LangService, Lang } from '../../services/lang.service';
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
-    styleUrls: ['./header.component.scss'],
-    standalone: false
+    styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
   public mobile: boolean | undefined;

@@ -16,25 +16,23 @@ import { DisplayDocsComponent } from './components/display-docs/display-docs.com
 import { FontsDocsComponent } from './components/fonts-docs/fonts-docs.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ButtonsDocsComponent,
-    HeaderComponent,
-    HomeDocsComponent,
-    InputsDocsComponent,
-    SidebarNavComponent,
-    SummaryDocsComponent,
-    ColorsDocsComponent,
-    ModalDocsComponent,
-    SizesDocsComponent,
-    DisplayDocsComponent,
-    FontsDocsComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ButtonsDocsComponent,
+        HeaderComponent,
+        HomeDocsComponent,
+        InputsDocsComponent,
+        SidebarNavComponent,
+        SummaryDocsComponent,
+        ColorsDocsComponent,
+        ModalDocsComponent,
+        SizesDocsComponent,
+        DisplayDocsComponent,
+        FontsDocsComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

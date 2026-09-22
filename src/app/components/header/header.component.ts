@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LangService, Lang } from '../../services/lang.service';
+
+export type Locale = 'es' | 'en' | 'it';
 
 @Component({
     selector: 'app-header',
@@ -9,21 +10,18 @@ import { LangService, Lang } from '../../services/lang.service';
 export class HeaderComponent implements OnInit {
   public mobile: boolean | undefined;
 
-  constructor(public readonly langService: LangService) {}
-
   public ngOnInit(): void {
-    if (window.screen.width > 992) {
-      this.mobile = false;
-    } else {
-      this.mobile = true;
-    }
+    this.mobile = window.screen.width <= 992;
   }
 
-  public setLang(lang: Lang): void {
-    this.langService.setLang(lang);
+  public setLocale(locale: Locale): void {
+    const currentPath = window.location.pathname;
+    const pathWithoutLocale = currentPath.replace(/^\/(es|en|it)(\/|$)/, '/');
+    window.location.href = `/${locale}${pathWithoutLocale}`;
   }
 
-  get currentLang(): Lang {
-    return this.langService.current;
+  get currentLocale(): Locale {
+    const match = window.location.pathname.match(/^\/(es|en|it)(\/|$)/);
+    return (match?.[1] as Locale) ?? 'es';
   }
 }

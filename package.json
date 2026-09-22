@@ -4,9 +4,17 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:es": "ng serve --configuration=es",
+    "start:en": "ng serve --configuration=en",
+    "start:it": "ng serve --configuration=it",
     "build": "ng build",
+    "build:i18n": "ng build --localize",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "extract-i18n": "ng extract-i18n --output-path src/locale && node scripts/merge-i18n.js",
+    "translate": "node scripts/auto-translate.js",
+    "serve:i18n": "node scripts/serve-i18n.js",
+    "build:serve:i18n": "npm run build:i18n && npm run serve:i18n"
   },
   "private": true,
   "dependencies": {
@@ -22,10 +30,23 @@
     "tslib": "^2.3.0",
     "zone.js": "~0.15.1"
   },
+  "xliffmerge": {
+    "srcDir": "src/locale",
+    "genDir": "src/locale",
+    "i18nFile": "messages.xlf",
+    "i18nFormat": "xlf",
+    "encoding": "UTF-8",
+    "defaultLanguage": "es",
+    "languages": ["en", "it"],
+    "removeUnusedIds": false,
+    "useSourceAsTarget": true
+  },
   "devDependencies": {
     "@angular/build": "^21.2.10",
     "@angular/cli": "^21.2.10",
     "@angular/compiler-cli": "^21.2.12",
+    "@angular/localize": "^21.2.12",
+    "@ngx-i18nsupport/tooling": "^8.0.3",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
     "jasmine-core": "~4.0.0",

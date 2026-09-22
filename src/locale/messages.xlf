@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="es" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="3573439379495781930" datatype="html">
+        <source>Copiado al portapapeles</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/colors-docs/colors-docs.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4759729284961038553" datatype="html">
+        <source>Elements / Colors</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/colors-docs/colors-docs.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5267754967054916445" datatype="html">
+        <source>Colors</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/colors-docs/colors-docs.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6954696566506564784" datatype="html">
+        <source> Esta guía explica la paleta de colores del sistema de diseño siguiendo la arquitectura ITCSS definida. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/colors-docs/colors-docs.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2590685439182299408" datatype="html">
+        <source>Colores primarios</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/colors-docs/colors-docs.component.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1552530432427814129" datatype="html">
+        <source>Colores acento</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/colors-docs/colors-docs.component.html</context>
+          <context context-type="linenumber">125,126</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3617666852910636860" datatype="html">
+        <source>Escala de grises</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/colors-docs/colors-docs.component.html</context>
+          <context context-type="linenumber">266,267</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7319508825792256428" datatype="html">
+        <source>Elements / Fonts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3188430589797990929" datatype="html">
+        <source>Fonts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3354297393071330957" datatype="html">
+        <source> Utilidades CSS para controlar las fuentes y tipografías. Todas las clases soportan el sistema responsive con los mismos breakpoints definidos en Settings. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3539051386195705948" datatype="html">
+        <source>Fonts utilities</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8393784667796167943" datatype="html">
+        <source> Utilidades para controlar <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>font-size<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/>, <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>font-weight<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/> y <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>text-align<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/>. Las clases siguen el patrón <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>.u-{propiedad}-{valor}<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/> y admiten modificador de breakpoint <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>.u-{propiedad}-{bp}-{valor}<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/>. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">22,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6801800578594687537" datatype="html">
+        <source>Breakpoints disponibles:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4507021345771427845" datatype="html">
+        <source>Sufijo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4109736008360434013" datatype="html">
+        <source>Breakpoint</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2702769239797460498" datatype="html">
+        <source>Descripción</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1129483510710002718" datatype="html">
+        <source>Sin media query, base mobile-first</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5197769791650253243" datatype="html">
+        <source>Tablet en adelante</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">38,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="628073111647476794" datatype="html">
+        <source>Escritorio pequeño</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7484772853903143157" datatype="html">
+        <source>Escritorio grande</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">40,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7804560590704265137" datatype="html">
+        <source>Pantalla extra grande</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">41,42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="714602383330613511" datatype="html">
+        <source>Pantalla ultra ancha</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">42,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4936430223225094369" datatype="html">
+        <source>Font Size — <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>u-fs-*<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/>:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">47,48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7032152245479660376" datatype="html">
+        <source>Clase</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">51,52</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">75,76</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">97,98</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2861173323240598209" datatype="html">
+        <source>CSS generado</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">76,77</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">98,99</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="985743179835830223" datatype="html">
+        <source>Previsualización</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">53,54</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">77,78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6821357144304111126" datatype="html">
+        <source>Texto de muestra</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7851357115384661471" datatype="html">
+        <source>Responsive a partir de tablet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">68,69</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">107,108</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4628959660285045747" datatype="html">
+        <source>Font Weight — <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>u-fw-*<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/>:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">71,72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6652491523816096983" datatype="html">
+        <source>Responsive a partir de escritorio</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">90,91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5231614280781361453" datatype="html">
+        <source>Text Align — <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>u-ta-*<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/>:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">93,94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8291715189774824014" datatype="html">
+        <source>Uso típico</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">99,100</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1551989710963225724" datatype="html">
+        <source>Alineación izquierda (valor por defecto)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">103,104</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5983036911087197867" datatype="html">
+        <source>Texto centrado, útil en títulos o banners</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">104,105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5940609464744144577" datatype="html">
+        <source>Alineación derecha, útil en cifras o precios</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">105,106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3713813583517578695" datatype="html">
+        <source>Texto justificado para bloques largos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">106,107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3557199928392016937" datatype="html">
+        <source>✔️ Forma correcta</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">140,141</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5573502266313025642" datatype="html">
+        <source>Usar las clases utilitarias en lugar de estilos en línea para <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>font-size<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/>, <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>font-weight<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/> y <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>text-align<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/>.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">142,143</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4391666311912305059" datatype="html">
+        <source>Combinar clases responsive para adaptar la tipografía en distintas resoluciones: <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>.u-fs-14 .u-fs-md-16<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/>.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">143,144</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7887450376895615259" datatype="html">
+        <source>Usar el sufijo <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>xs<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/> como base mobile-first y sobrescribir con breakpoints mayores.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">144,145</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3687760729288199748" datatype="html">
+        <source>Usar <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>.u-fw-600<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/> o <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>.u-fw-700<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/> para destacar títulos y etiquetas.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">145,146</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2881333068371086745" datatype="html">
+        <source>❌ Usos prohibidos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">149,150</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4996414770843537167" datatype="html">
+        <source>No escribir <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>font-size<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/>, <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>font-weight<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/> ni <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>text-align<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/> en línea si existe la clase utilitaria equivalente.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">151,152</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7771553508530768969" datatype="html">
+        <source>No crear clases ad-hoc para tamaños o pesos que ya están definidos en el mapa.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">152,153</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4783287837854058269" datatype="html">
+        <source>No añadir valores fuera de <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>$px-map<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/>, <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>$fw-map<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/> o <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>$ta-map<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/> sin actualizar las variables del sistema.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/fonts-docs/fonts-docs.component.html</context>
+          <context context-type="linenumber">153,154</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3278664942116064122" datatype="html">
+        <source> Documentación de inputs, selects y radios siguiendo la metodología BEM. Selecciona una variante para ver su preview, su código HTML y poder copiarlo al portapapeles. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/inputs-docs/inputs-docs.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1609195019379747326" datatype="html">
+        <source> Componente de diálogo basado en el elemento nativo <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>&lt;dialog&gt;<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/>. Permite mostrar contenido emergente de forma accesible y consistente con el design system de Rastreator. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/modal-docs/modal-docs.component.html</context>
+          <context context-type="linenumber">6,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2912647686774390006" datatype="html">
+        <source> Define <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>altura<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> (<x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>height<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/>) y <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>ancho<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> (<x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>width<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/>) con valores fijos en píxeles o porcentuales. Las clases siguen el patrón <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>.u-{propiedad}-{valor}<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/> y admiten un modificador de breakpoint opcional <x id="START_TAG_CODE" ctype="x-code" equiv-text="&lt;code&gt;"/>.u-{propiedad}-{bp}-{valor}<x id="CLOSE_TAG_CODE" ctype="x-code" equiv-text="&lt;/code&gt;"/>. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sizes-docs/sizes-docs.component.html</context>
+          <context context-type="linenumber">23,29</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

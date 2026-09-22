@@ -16,6 +16,22 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": {
+          "code": "es",
+          "baseHref": "/es/"
+        },
+        "locales": {
+          "en": {
+            "translation": "src/locale/messages.en.xlf",
+            "baseHref": "/en/"
+          },
+          "it": {
+            "translation": "src/locale/messages.it.xlf",
+            "baseHref": "/it/"
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular/build:application",
@@ -25,7 +41,8 @@
             },
             "index": "src/index.html",
             "polyfills": [
-              "src/polyfills.ts"
+              "src/polyfills.ts",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -69,6 +86,15 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "es": {
+              "localize": ["es"]
+            },
+            "en": {
+              "localize": ["en"]
+            },
+            "it": {
+              "localize": ["it"]
             }
           },
           "defaultConfiguration": "production"
@@ -81,6 +107,15 @@
             },
             "development": {
               "buildTarget": "rastreator-components:build:development"
+            },
+            "es": {
+              "buildTarget": "rastreator-components:build:development,es"
+            },
+            "en": {
+              "buildTarget": "rastreator-components:build:development,en"
+            },
+            "it": {
+              "buildTarget": "rastreator-components:build:development,it"
             }
           },
           "defaultConfiguration": "development"
@@ -95,7 +130,10 @@
           "builder": "@angular/build:karma",
           "options": {
             "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": [
+              "src/polyfills.ts",
+              "@angular/localize/init"
+            ],
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",

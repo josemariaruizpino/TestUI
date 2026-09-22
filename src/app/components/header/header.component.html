@@ -12,9 +12,9 @@
         </a>
       </div>
       <div class="header__items">
-        <img src="../../../assets/img/spain.svg" alt="Spain flag" class="header__flag" [class.header__flag--active]="currentLang === 'es'" (click)="setLang('es')">
-        <img src="../../../assets/img/uk.svg" alt="UK flag" class="header__flag" [class.header__flag--active]="currentLang === 'en'" (click)="setLang('en')">
-        <img src="../../../assets/img/italy.svg" alt="Italy flag" class="header__flag">
+        <img src="../../../assets/img/spain.svg" alt="Spain flag" class="header__flag" [class.header__flag--active]="currentLocale === 'es'" (click)="setLocale('es')">
+        <img src="../../../assets/img/uk.svg" alt="UK flag" class="header__flag" [class.header__flag--active]="currentLocale === 'en'" (click)="setLocale('en')">
+        <img src="../../../assets/img/italy.svg" alt="Italy flag" class="header__flag" [class.header__flag--active]="currentLocale === 'it'" (click)="setLocale('it')">
       </div>
     </div>
   </div>

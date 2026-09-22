@@ -1,0 +1,9 @@
+{
+  "i18n-ally.localesPaths": ["src/locale"],
+  "i18n-ally.sourceLanguage": "es",
+  "i18n-ally.displayLanguage": "en",
+  "i18n-ally.enabledFrameworks": ["angular"],
+  "i18n-ally.keystyle": "flat",
+  "i18n-ally.translate.engines": ["google"],
+  "i18n-ally.translate.saveAuto": false
+}

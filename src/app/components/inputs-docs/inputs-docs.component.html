@@ -31,18 +31,20 @@
         </div>
 
         @if (supportsError) {
-          <label class="checkbox u-ms-24 u-mt-16">
-            <input
+                  <div class="e-checkbox u-ms-16 u-mt-16">
+          <label class="e-checkbox__label">
+<input
               type="checkbox"
               name="error-variant"
               [checked]="isErrorVariant"
               (change)="onErrorVariantChange($any($event.target).checked)"
               >
-            <div class="checkbox__container">
-              <span class="checkmark"></span>
-              <span class="checkbox__txt">Estado error</span>
+            <div class="e-checkbox__checkmark-container">
+              <span class="e-checkbox__checkmark"></span>
+              <span class="e-checkbox__text">Estado error</span>
             </div>
           </label>
+        </div>
         }
       </div>
     </article>

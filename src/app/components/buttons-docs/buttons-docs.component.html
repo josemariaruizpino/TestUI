@@ -24,22 +24,29 @@
             </select>
           </div>
         </div>
-        <label class="checkbox u-ms-24 u-mt-16">
-          <input type="checkbox" name="checkmark" [checked]="isSquareVariant"
+        <div class="buttons-docs__inputs">
+        <div class="e-checkbox">
+          <label class="e-checkbox__label">
+            <input type="checkbox" name="checkmark" [checked]="isSquareVariant"
             (change)="onSquareVariantChange($any($event.target).checked)">
-          <div class="checkbox__container">
-            <span class="checkmark"></span>
-            <span class="checkbox__txt">Variante cuadrada</span>
-          </div>
-        </label>
-        <label class="checkbox u-ms-24 u-mt-16">
-          <input type="checkbox" name="checkmark" [checked]="isDisabledVariant"
+            <div class="e-checkbox__checkmark-container">
+              <span class="e-checkbox__checkmark"></span>
+              <span class="e-checkbox__text">Variante cuadrada</span>
+            </div>
+          </label>
+        </div>
+        <div class="e-checkbox">
+          <label class="e-checkbox__label">
+            <input type="checkbox" name="checkmark" [checked]="isDisabledVariant"
             (change)="onDisabledVariantChange($any($event.target).checked)">
-          <div class="checkbox__container">
-            <span class="checkmark"></span>
-            <span class="checkbox__txt">Variante disabled</span>
-          </div>
-        </label>
+            <div class="e-checkbox__checkmark-container">
+              <span class="e-checkbox__checkmark"></span>
+              <span class="e-checkbox__text">Variante deshabilitada</span>
+            </div>
+          </label>
+        </div>
+        </div>
+
       </div>
       <div>
         <details class="e-summary e-summary--secondary u-mb-16">
@@ -91,14 +98,16 @@
               </div>
             </div>
             <div>
-              <label class="checkbox">
-                <input type="checkbox" name="checkmark" [checked]="isResponsiveVariant"
+                      <div class="e-checkbox">
+                        <label class="e-checkbox__label">
+                          <input type="checkbox" name="checkmark" [checked]="isResponsiveVariant"
                   (change)="onResponsiveVariantChange($any($event.target).checked)">
-                <div class="checkbox__container">
-                  <span class="checkmark"></span>
-                  <span class="checkbox__txt">Personalización extra para responsive</span>
-                </div>
-              </label>
+                          <div class="e-checkbox__checkmark-container">
+                            <span class="e-checkbox__checkmark"></span>
+                            <span class="e-checkbox__text">Personalización extra para responsive</span>
+                          </div>
+                        </label>
+                      </div>
               @if (isResponsiveVariant) {
                 <div>
                   @for (entry of breakpointEntries; track entry; let i = $index) {
@@ -172,14 +181,16 @@
                       }
                     </div>
                   }
-                  <label class="checkbox u-mt-16">
-                    <input type="checkbox" name="add-breakpoint" #addBpCheckbox
+                                        <div class="e-checkbox u-mt-16">
+                        <label class="e-checkbox__label">
+                 <input type="checkbox" name="add-breakpoint" #addBpCheckbox
                       (change)="addBreakpoint(); addBpCheckbox.checked = false">
-                    <div class="checkbox__container">
-                      <span class="checkmark"></span>
-                      <span class="checkbox__txt">Añadir otro breakpoint</span>
-                    </div>
-                  </label>
+                          <div class="e-checkbox__checkmark-container">
+                            <span class="e-checkbox__checkmark"></span>
+                            <span class="e-checkbox__text">Añadir otro breakpoint</span>
+                          </div>
+                        </label>
+                      </div>
                 </div>
               }
             </div>

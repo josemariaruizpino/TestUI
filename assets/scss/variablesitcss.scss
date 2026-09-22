@@ -1,0 +1,54 @@
+// Devices  - Breakpoints
+$screen-xxs: 350px !default;
+$screen-xs: 480px !default;
+$screen-sm: 768px !default;
+$screen-md: 992px !default;
+$screen-lg: 1224px !default;
+$screen-xl: 1919px !default;
+$screen-xxl: 2000px !default;
+
+// Rastreator theme - colors
+$color-blue-01-rastreator: #009fc7 !default;
+$color-blue-02: #015368 !default;
+$color-blue-02h: #014252 !default;
+$color-blue-02a: #003644 !default;
+$color-blue-03: #19a8cc !default;
+$color-blue-04: #61c3dc !default;
+$color-blue-05: #d2f4ff !default;
+$color-blue-06: #f7faff !default;
+$color-blue-07: #f0fbff !default;
+$color-grey-01: #181e28 !default;
+$color-grey-02: #424b5a !default;
+$color-grey-03: #859ca8 !default;
+$color-grey-04: #c2d1d9 !default;
+$color-grey-05: #e2eaf0 !default;
+$color-grey-06: #f2f5f7 !default;
+$color-grey-07: #fafafa !default;
+$color-grey-08: #f0f0f0 !default;
+$color-white: #fff !default;
+$color-white-02: rgba($color-white, 0.3) !default;
+$color-black: #000 !default;
+$color-green-default: #118849 !default;
+$color-green-default-hover: #017336 !default;
+$color-green-default-active: #016530 !default;
+$color-green-01: #3dd092 !default;
+$color-green-01h: #27c07f !default;
+$color-green-01a: #23b376 !default;
+$acent-green-active: #22af73 !default;
+$color-orange-01: #ba4d26 !default;
+$color-orange-02: #ff9872 !default;
+$color-orange-02h: #f18862 !default;
+$color-orange-02a: #e67850 !default;
+$color-fainted-orange: #ffc8b4 !default;
+$color-orange-seges: #F8A37B !default;
+$color-red-01: #a70000 !default;
+$color-red-02: #f53048 !default;
+$color-error-seges: #DC3545 !default;
+$color-yellow-01: #ede46c !default;
+$color-overlay-cms: rgba($color-blue-02, 0.65) !default;
+
+// Shadow colors
+$color-shadow-01: rgba(0, 0, 0, 0.06) !default;
+$color-shadow-02: rgba(0, 0, 0, 0.07) !default;
+$color-shadow-03: rgba(58, 111, 175, 0.19) !default;
+$color-shadow-04: rgba(0, 0, 0, 0.05) !default;

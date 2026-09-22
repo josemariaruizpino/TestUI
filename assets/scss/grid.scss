@@ -1,0 +1,34 @@
+@use "sass:math";
+
+$grid-columns: 12;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 768px,
+  md: 992px,
+  lg: 1224px,
+  xl: 1919px,
+  xxl: 2000px
+);
+ 
+// Mixin para generar columnas
+@mixin generate-columns($breakpoint: "") {
+  @for $i from 1 through $grid-columns {
+    .col#{$breakpoint}-#{$i} {
+      flex: 0 0 percentage(math.div($i, $grid-columns));
+      width: percentage(math.div($i, $grid-columns));
+    }
+  }
+}
+ 
+// Generar columnas para cada punto de ruptura
+@include generate-columns(); // Para .col-*
+ 
+@each $breakpoint, $size in $grid-breakpoints {
+  @media (min-width: $size) {
+    @include generate-columns("-#{$breakpoint}");
+  }
+}
+
+.hidden{
+    display: none;
+}

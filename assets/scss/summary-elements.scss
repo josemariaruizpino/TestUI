@@ -1,0 +1,107 @@
+@use 'variables' as *;
+
+.e-summary {
+    width: 100%;
+    interpolate-size: allow-keywords;
+
+    &[open] {
+        .e-summary__icon {
+            transform: rotate(180deg);
+            transition: transform 0.3s ease;
+        }
+        &::details-content {
+            height: auto;
+        }
+    }
+
+    &::details-content {
+        height: 0;
+        overflow-y: clip;
+        transition: content-visibility 0.3s allow-discrete, block-size 0.3s;
+        transition-timing-function: ease-out;
+    }
+
+    @supports not (interpolate-size: allow-keywords) {
+        interpolate-size: none;
+
+        &::details-content {
+            transition: none;
+            overflow: hidden;
+            height: 0;
+            max-height: 0;
+            transition: max-height 0.5s ease-out;
+        }
+
+        &[open]::details-content {
+            height: auto;
+            max-height: 500px;
+        }
+    }
+
+
+    &__trigger {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        color: $color-grey-01;
+        cursor: pointer;
+    }
+
+    &__title {
+        margin: 0;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+
+        @media (max-width: $screen-md) {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+
+    &__icon {
+        font-size: 12px;
+        transition: transform 0.3s ease;
+    }
+
+    &__content {
+        color: $color-grey-01;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        margin-top: 8px;
+        interpolate-size: allow-keywords;
+        transition: all 0.3s ease;
+
+        @media (max-width: $screen-md) {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+
+    &__link {
+        color: $color-grey-01;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        text-decoration-line: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &--secondary {
+        @extend .e-summary;
+
+        .e-summary__trigger {
+            color: $color-blue-01-rastreator;
+        }
+
+        .e-summary__title {
+            font-weight: 600;
+            text-decoration: underline;
+        }
+    }
+}

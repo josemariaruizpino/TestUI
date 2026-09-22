@@ -37,7 +37,10 @@
     "i18nFormat": "xlf",
     "encoding": "UTF-8",
     "defaultLanguage": "es",
-    "languages": ["en", "it"],
+    "languages": [
+      "en",
+      "it"
+    ],
     "removeUnusedIds": false,
     "useSourceAsTarget": true
   },
@@ -46,9 +49,9 @@
     "@angular/cli": "^21.2.10",
     "@angular/compiler-cli": "^21.2.12",
     "@angular/localize": "^21.2.12",
-    "@ngx-i18nsupport/tooling": "^8.0.3",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
+    "angular-cli-ghpages": "^3.1.0",
     "jasmine-core": "~4.0.0",
     "karma": "~6.4.4",
     "karma-chrome-launcher": "~3.1.0",
